@@ -1,0 +1,25 @@
+.barra-inicial {
+    all:revert;
+    * {
+        color: black;
+    }
+}
+#cabecalho .conteiner .row-fluid {
+    * {
+        all: revert;
+        display: inline-block;
+        text-decoration: none;
+    }
+    & {
+        display: flex;
+    }
+    h1.logo {
+            margin: 0;
+            a {
+                display: block;
+            }
+        }
+        div.conteudo-topo.span9 *{
+            color: initial;
+        }
+}

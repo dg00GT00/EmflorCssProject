@@ -1,0 +1,36 @@
+@import url(http://fonts.googleapis.com/css2?family=Nunito:wght@400);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.barra-inicial {
+  all: revert;
+}
+.barra-inicial * {
+  color: black;
+}
+
+#cabecalho .conteiner .row-fluid * {
+  all: revert;
+  display: inline-block;
+  text-decoration: none;
+}
+#cabecalho .conteiner .row-fluid {
+  display: flex;
+}
+#cabecalho .conteiner .row-fluid h1.logo {
+  margin: 0;
+}
+#cabecalho .conteiner .row-fluid h1.logo a {
+  display: block;
+}
+#cabecalho .conteiner .row-fluid div.conteudo-topo.span9 * {
+  color: initial;
+}
+
+html .titulo .listagem-linha {
+  font-family: "Nunito";
+  font-weight: 400;
+}
