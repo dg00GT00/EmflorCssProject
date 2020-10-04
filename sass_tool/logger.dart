@@ -18,9 +18,9 @@ class DefaultLogger extends BaseLogger {
     final colorLog = ColorLog();
     Logger.root.level = Level.ALL;
     Logger.root.onRecord.listen((LogRecord record) {
-      final colorLevel = colorLog.getColoredLog(record.level.name.toUpperCase());
-      print(
-          '${colorLevel}: ${record.time}: ${record.message}');
+      final colorLevel =
+          colorLog.getColoredLog(record.level.name.toUpperCase());
+      print('${colorLevel}: ${record.time}: ${record.message}');
     });
   }
 

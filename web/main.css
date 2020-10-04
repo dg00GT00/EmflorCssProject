@@ -1,15 +1,45 @@
 @import url(http://fonts.googleapis.com/css2?family=Nunito:wght@400);
-* {
+*, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito";
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.barra-inicial .row-fluid *, .barra-inicial .row-fluid .fa-whatsapp {
+  all: revert;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.barra-inicial .row-fluid .fa-whatsapp, .barra-inicial .row-fluid ul i, #cabecalho .conteiner .row-fluid i {
+  font-family: "FontAwesome-v4";
+  font-weight: initial;
+  font-style: initial;
+  font-size: 1.5rem;
 }
 
 .barra-inicial {
   all: revert;
 }
 .barra-inicial * {
-  color: black;
+  color: initial;
+}
+.barra-inicial .conteiner {
+  padding: revert;
+}
+.barra-inicial .row-fluid ul {
+  list-style: none;
+}
+.barra-inicial .row-fluid ul a {
+  text-decoration: none;
+  color: initial;
 }
 
 #cabecalho .conteiner .row-fluid * {
@@ -35,20 +65,32 @@
 #cabecalho .conteiner .row-fluid div.conteudo-topo.span9 * {
   color: initial;
 }
+#cabecalho .conteiner .row-fluid div.conteudo-topo.span9 [class^=icon-]::before {
+  margin-right: 0.5rem;
+}
 #cabecalho .conteiner .row-fluid div.conteudo-topo.span9 .span8 {
   align-self: center;
 }
 #cabecalho .conteiner .row-fluid div.conteudo-topo.span9 .span4 {
   align-self: center;
   margin-left: auto;
+  width: 50%;
 }
 #cabecalho .conteiner .row-fluid div.conteudo-topo.span9 .span4 ul:first-of-type {
   margin: 0;
   padding: 0;
+  display: flex;
 }
-
-body {
-  font-family: "Nunito";
-  font-size: 0.8rem;
-  font-weight: 400;
+#cabecalho .conteiner .row-fluid div.conteudo-topo.span9 .span4 ul:first-of-type li {
+  display: flex;
+  flex: auto;
+  align-items: center;
+}
+#cabecalho .conteiner .row-fluid div.conteudo-topo.span9 .span4 .carrinho {
+  display: flex;
+  justify-content: flex-end;
+}
+#cabecalho .conteiner .row-fluid div.conteudo-topo.span9 .span4 .carrinho a {
+  display: flex;
+  align-content: center;
 }

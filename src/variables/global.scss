@@ -3,3 +3,23 @@
 $main-font: 'Nunito';
 $main-font-size: .8rem;
 $main-background-color: #7fbd57; 
+
+%main-font {
+    font-family: $main-font;
+    font-size: $main-font-size;
+    font-weight: 400;
+}
+
+%default-reset {
+    all:revert;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+%icon-font {
+    font-family: "FontAwesome-v4";
+    font-weight: initial;
+    font-style: initial;
+    font-size: 1.5rem;
+}

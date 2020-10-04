@@ -1,11 +1,5 @@
 @use '../variables/global';
 
-%main-font {
-    font-family: global.$main-font;
-    font-size: global.$main-font-size;
-    font-weight: 400;
-}
-
 body {
     @extend %main-font;
 }
