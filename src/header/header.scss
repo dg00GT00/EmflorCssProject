@@ -19,7 +19,24 @@
                 display: block;
             }
         }
-        div.conteudo-topo.span9 *{
-            color: initial;
+        div.conteudo-topo.span9 {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            width: 100%;
+            * {
+                color: initial;
+            }
+            .span8 {
+                align-self: center;
+            }
+            .span4 {
+                ul:first-of-type{
+                    margin: 0;
+                    padding: 0;
+                }
+                align-self: center;
+                margin-left: auto;
+            }
         }
 }

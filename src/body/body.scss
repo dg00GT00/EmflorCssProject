@@ -1,13 +1,11 @@
 @use '../variables/global';
 
-html {
-    // background-color: #fff8f8;
-    .titulo .listagem-linha {
-        font-family: global.$main-font;
-        font-weight: 400;
-    }
+%main-font {
+    font-family: global.$main-font;
+    font-size: global.$main-font-size;
+    font-weight: 400;
 }
 
-// .fundo-secundario {
-//     background-color: global.$main-background-color;
-// }
+body {
+    @extend %main-font;
+}
