@@ -7,7 +7,7 @@ import 'package:watcher/watcher.dart';
 
 import 'css_writer.dart';
 import 'logger.dart';
-import 'utils.dart';
+import 'utils/files_system.dart';
 
 class WatcherBuilder {
   Stream<WatchEvent> sassStream;

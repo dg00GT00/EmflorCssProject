@@ -1,4 +1,5 @@
 import 'package:logging/logging.dart';
+import 'utils/logger_platform.dart';
 
 abstract class BaseLogger {
   String loggerName;
@@ -14,10 +15,12 @@ class DefaultLogger extends BaseLogger {
   }
 
   void _generateLoggerInfo() {
+    final colorLog = ColorLog();
     Logger.root.level = Level.ALL;
     Logger.root.onRecord.listen((LogRecord record) {
+      final colorLevel = colorLog.getColoredLog(record.level.name.toUpperCase());
       print(
-          '[${record.level.name.toUpperCase()}]: ${record.time}: ${record.message}');
+          '${colorLevel}: ${record.time}: ${record.message}');
     });
   }
 
