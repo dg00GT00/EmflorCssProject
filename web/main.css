@@ -11,14 +11,14 @@ body {
   font-weight: 400;
 }
 
-.barra-inicial .row-fluid *, .barra-inicial .row-fluid .fa-whatsapp {
+.barra-inicial .conteiner .row-fluid .canais-contato ul, .barra-inicial .conteiner .row-fluid .canais-contato ul *, .barra-inicial .conteiner .row-fluid .canais-contato ul::after {
   all: revert;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-.barra-inicial .row-fluid .fa-whatsapp, .barra-inicial .row-fluid ul i, #cabecalho .conteiner .row-fluid i {
+.barra-inicial .conteiner .row-fluid .canais-contato ul li i, #cabecalho .conteiner .row-fluid i {
   font-family: "FontAwesome-v4";
   font-weight: initial;
   font-style: initial;
@@ -26,20 +26,53 @@ body {
 }
 
 .barra-inicial {
-  all: revert;
-}
-.barra-inicial * {
-  color: initial;
+  line-height: normal;
 }
 .barra-inicial .conteiner {
-  padding: revert;
+  position: relative;
 }
-.barra-inicial .row-fluid ul {
+.barra-inicial .conteiner .row-fluid *, .barra-inicial .conteiner .row-fluid::before, .barra-inicial .conteiner .row-fluid::after, .barra-inicial .conteiner .row-fluid [class*=span] {
+  all: revert;
+}
+.barra-inicial .conteiner .row-fluid .canais-contato {
+  position: absolute;
+  top: 92.4px;
+  right: 0;
+  margin: 0;
+  width: auto;
+}
+.barra-inicial .conteiner .row-fluid .canais-contato ul {
+  position: relative;
   list-style: none;
-}
-.barra-inicial .row-fluid ul a {
-  text-decoration: none;
   color: initial;
+}
+.barra-inicial .conteiner .row-fluid .canais-contato ul i::before {
+  margin-right: 0.5rem;
+}
+.barra-inicial .conteiner .row-fluid .canais-contato ul li {
+  margin: 0;
+  padding: 0;
+  color: inherit;
+}
+.barra-inicial .conteiner .row-fluid .canais-contato ul li.tel-whatsapp {
+  position: absolute;
+  top: 110.8px;
+  right: 143.5%;
+  width: max-content;
+}
+.barra-inicial .conteiner .row-fluid .canais-contato ul li i {
+  color: inherit;
+}
+.barra-inicial .conteiner .row-fluid .canais-contato ul li span {
+  color: inherit;
+  display: flex;
+  align-items: center;
+}
+.barra-inicial .conteiner .row-fluid .canais-contato ul li a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
 }
 
 #cabecalho .conteiner .row-fluid * {
