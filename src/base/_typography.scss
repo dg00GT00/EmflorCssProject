@@ -1,0 +1,15 @@
+@use '../abstracts/variables' as v;
+@import url(http://fonts.googleapis.com/css2?family=Nunito:wght@400);
+
+%icon-font {
+    font-family: "FontAwesome-v4";
+    font-weight: initial;
+    font-style: initial;
+    font-size: 1.5rem;
+}
+
+%main-font {
+    font-family: v.$main-font;
+    font-size: v.$main-font-size;
+    font-weight: 400;
+}
