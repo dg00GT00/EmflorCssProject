@@ -18,7 +18,7 @@ body {
   padding: 0;
 }
 
-.barra-inicial .conteiner .row-fluid .canais-contato ul li i, #cabecalho .conteiner .row-fluid i {
+#cabecalho .conteiner .row-fluid i, .barra-inicial .conteiner .row-fluid .canais-contato ul li i {
   font-family: "FontAwesome-v4";
   font-weight: initial;
   font-style: initial;
