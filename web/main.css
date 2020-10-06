@@ -6,20 +6,24 @@
   box-sizing: border-box;
 }
 
-#cabecalho .conteiner .row-fluid .conteudo-topo .inferior .busca #form-buscar .icon-search, #cabecalho .conteiner .row-fluid .conteudo-topo i, .barra-inicial .conteiner .row-fluid .canais-contato ul li i {
+#cabecalho .conteiner .row-fluid .conteudo-topo .inferior .busca #form-buscar .icon-search, #cabecalho .conteiner .row-fluid .conteudo-topo i, #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n), .barra-inicial .conteiner .row-fluid .canais-contato ul li i {
   font-family: "FontAwesome-v4";
   font-weight: initial;
   font-style: initial;
   font-size: 1.2rem;
 }
 
-body {
+body, #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n) strong {
   font-family: "Nunito";
   font-size: 0.9rem;
   font-weight: 400;
 }
 
-.barra-inicial .conteiner .row-fluid .canais-contato ul, .barra-inicial .conteiner .row-fluid .canais-contato ul *, .barra-inicial .conteiner .row-fluid .canais-contato ul::after {
+#cabecalho .conteiner .menu.superior, #cabecalho .conteiner .menu.superior *,
+#cabecalho .conteiner .menu.superior *::before,
+#cabecalho .conteiner .menu.superior *::after, #cabecalho .conteiner .menu.superior .nivel-um .nivel-dois.borda-alpha *,
+#cabecalho .conteiner .menu.superior .nivel-um .nivel-dois.borda-alpha *::before,
+#cabecalho .conteiner .menu.superior .nivel-um .nivel-dois.borda-alpha *::after, .barra-inicial .conteiner .row-fluid .canais-contato ul, .barra-inicial .conteiner .row-fluid .canais-contato ul *, .barra-inicial .conteiner .row-fluid .canais-contato ul::after {
   all: revert;
   box-sizing: border-box;
   margin: 0;
@@ -186,4 +190,57 @@ body {
 #cabecalho .conteiner .row-fluid a {
   color: initial;
   text-decoration: none;
+}
+#cabecalho .conteiner .menu.superior {
+  z-index: 10;
+}
+#cabecalho .conteiner .menu.superior *,
+#cabecalho .conteiner .menu.superior *::before,
+#cabecalho .conteiner .menu.superior *::after {
+  text-decoration: none;
+  color: initial;
+  list-style: none;
+}
+#cabecalho .conteiner .menu.superior .nivel-um {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 50px;
+  text-align: center;
+}
+#cabecalho .conteiner .menu.superior .nivel-um ul:first-of-type {
+  display: block;
+  background-color: white;
+}
+#cabecalho .conteiner .menu.superior .nivel-um li {
+  height: inherit;
+  flex: auto;
+  position: relative;
+}
+#cabecalho .conteiner .menu.superior .nivel-um li a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n) {
+  display: flex;
+  justify-content: center;
+}
+#cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n)::before, #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n)::after {
+  content: "";
+  margin: auto 0;
+}
+#cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n)::before {
+  margin-right: auto;
+}
+#cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n)::after {
+  margin-left: auto;
+}
+#cabecalho .conteiner .menu.superior .nivel-um .nivel-dois.borda-alpha *,
+#cabecalho .conteiner .menu.superior .nivel-um .nivel-dois.borda-alpha *::before,
+#cabecalho .conteiner .menu.superior .nivel-um .nivel-dois.borda-alpha *::after {
+  text-decoration: none;
+  list-style: none;
+  color: initial;
 }

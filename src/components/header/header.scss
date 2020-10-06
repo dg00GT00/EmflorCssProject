@@ -1,7 +1,7 @@
 @use '../../base';
 @use '../../abstracts/variables' as v;
 
-@mixin superior-menu() {
+@mixin header-superior-fields() {
 	.superior {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
@@ -12,8 +12,8 @@
 		.acoes-conta {
 			display: flex;
 			li {
-                // flex: auto;
-                width: 37%;
+				// flex: auto;
+				width: 37%;
 				display: flex;
 				align-items: center;
 				&:first-child {
@@ -33,7 +33,7 @@
 	}
 }
 
-@mixin inferior-menu() {
+@mixin header-inferior-fields() {
 	.inferior {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
@@ -65,14 +65,84 @@
 					@extend %icon-font;
 					border: none;
 					background-color: transparent;
-                    margin-left: 0.6rem;
-                    cursor: pointer;
+					margin-left: 0.6rem;
+					cursor: pointer;
 					&::before {
 						content: "\f002";
 					}
 				}
 			}
 		}
+	}
+}
+
+@mixin superior-menu-levels() {
+    .nivel-um {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 50px;
+        text-align: center;
+        ul:first-of-type {
+            display: block; // * Menus floating boxes
+            background-color: white; // * Temporary setting
+        }
+        li {
+            height: inherit;
+            flex: auto;
+            position: relative;
+            a {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            &:nth-child(2n) {
+                display: flex;
+                justify-content: center;
+                @extend %icon-font;
+                &::before,
+                &::after {
+                    content: "\f06c";
+                    margin: auto 0;
+                }
+                &::before {
+                    margin-right: auto;
+                }
+                &::after {
+                    margin-left: auto;
+                }
+                strong {
+                    @extend %main-font;
+                }
+            }
+        }
+        .nivel-dois.borda-alpha {
+            *,
+            *::before,
+            *::after {
+                @extend %default-revert;
+                text-decoration: none;
+                list-style: none;
+                color: initial;
+            }
+        }
+    }
+}
+
+@mixin superior-menu() {
+	.menu.superior {
+		@extend %default-revert;
+		z-index: 10;
+		*,
+		*::before,
+		*::after {
+			@extend %default-revert;
+			text-decoration: none;
+			color: initial;
+			list-style: none;
+		}
+		@include superior-menu-levels();
 	}
 }
 
@@ -106,8 +176,8 @@
 				display: grid;
 				align-items: center;
 				justify-items: center;
-				@include superior-menu();
-				@include inferior-menu();
+				@include header-superior-fields();
+				@include header-inferior-fields();
 				ul {
 					list-style: none;
 					* {
@@ -124,5 +194,6 @@
 				text-decoration: none;
 			}
 		}
+		@include superior-menu();
 	}
 }
