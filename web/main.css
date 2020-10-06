@@ -13,7 +13,7 @@
   font-size: 1.2rem;
 }
 
-body, #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n) strong {
+body, #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n) strong, #cabecalho .conteiner .menu.superior .nivel-um .nivel-dois.borda-alpha a {
   font-family: "Nunito";
   font-size: 0.9rem;
   font-weight: 400;
@@ -208,10 +208,6 @@ body, #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n) strong {
   height: 50px;
   text-align: center;
 }
-#cabecalho .conteiner .menu.superior .nivel-um ul:first-of-type {
-  display: block;
-  background-color: white;
-}
 #cabecalho .conteiner .menu.superior .nivel-um li {
   height: inherit;
   flex: auto;
@@ -237,10 +233,32 @@ body, #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n) strong {
 #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n)::after {
   margin-left: auto;
 }
+#cabecalho .conteiner .menu.superior .nivel-um .nivel-dois.borda-alpha {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 65%;
+  background-color: white;
+  transform: translateX(-50%);
+  box-shadow: 1px 3px 2px 0px #00000052;
+  border-radius: 3px;
+  padding: 0 20px;
+  border-top: 2px solid;
+}
 #cabecalho .conteiner .menu.superior .nivel-um .nivel-dois.borda-alpha *,
 #cabecalho .conteiner .menu.superior .nivel-um .nivel-dois.borda-alpha *::before,
 #cabecalho .conteiner .menu.superior .nivel-um .nivel-dois.borda-alpha *::after {
   text-decoration: none;
   list-style: none;
   color: initial;
+}
+#cabecalho .conteiner .menu.superior .nivel-um .nivel-dois.borda-alpha li {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#cabecalho .conteiner .menu.superior .nivel-um .nivel-dois.borda-alpha li:nth-child(2n) {
+  border-top: 1px solid rgba(0, 0, 0, 0.26);
 }
