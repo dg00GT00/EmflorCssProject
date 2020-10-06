@@ -1,0 +1,5 @@
+@use 'variables' as v;
+
+@function absolute-right-padding($distance-from-right-edge){
+    @return $distance-from-right-edge / v.$small-theme-width * 100;
+}

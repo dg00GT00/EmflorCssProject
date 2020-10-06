@@ -10,12 +10,12 @@
   font-family: "FontAwesome-v4";
   font-weight: initial;
   font-style: initial;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 body {
   font-family: "Nunito";
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: 400;
 }
 
@@ -28,6 +28,9 @@ body {
 
 .barra-inicial {
   line-height: normal;
+  height: 4px;
+  width: 980px;
+  margin: auto;
 }
 .barra-inicial .conteiner {
   position: relative;
@@ -36,10 +39,9 @@ body {
   all: revert;
 }
 .barra-inicial .conteiner .row-fluid .canais-contato {
-  display: none;
   position: absolute;
-  top: 92.4px;
-  right: 0;
+  top: 61.7px;
+  right: 2.2448979592%;
   margin: 0;
   width: auto;
 }
@@ -58,8 +60,8 @@ body {
 }
 .barra-inicial .conteiner .row-fluid .canais-contato ul li.tel-whatsapp {
   position: absolute;
-  top: 110.8px;
-  right: 143.5%;
+  top: 84px;
+  right: 120%;
   width: max-content;
 }
 .barra-inicial .conteiner .row-fluid .canais-contato ul li i {
@@ -94,6 +96,14 @@ body {
 }
 #cabecalho .conteiner .row-fluid .span3 {
   grid-row: logo;
+  justify-self: center;
+}
+#cabecalho .conteiner .row-fluid .span3 .logo {
+  height: 190px;
+}
+#cabecalho .conteiner .row-fluid .span3 .logo * {
+  display: inline-block;
+  height: inherit;
 }
 #cabecalho .conteiner .row-fluid .conteudo-topo {
   grid-row: menus;
@@ -106,22 +116,24 @@ body {
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   width: 100%;
+  border-top: 1px solid;
+  padding-top: 1.3rem;
 }
 #cabecalho .conteiner .row-fluid .conteudo-topo .superior .acoes-conta {
   display: flex;
 }
 #cabecalho .conteiner .row-fluid .conteudo-topo .superior .acoes-conta li {
-  flex: auto;
+  width: 37%;
   display: flex;
   align-items: center;
 }
 #cabecalho .conteiner .row-fluid .conteudo-topo .superior .acoes-conta li:first-child i::before {
   content: "";
-  height: 1rem;
+  height: 1.2rem;
 }
 #cabecalho .conteiner .row-fluid .conteudo-topo .superior .acoes-conta li:nth-child(2) i::before {
   content: "";
-  height: 1rem;
+  height: 1.2rem;
 }
 #cabecalho .conteiner .row-fluid .conteudo-topo .inferior {
   display: grid;
@@ -138,7 +150,6 @@ body {
 }
 #cabecalho .conteiner .row-fluid .conteudo-topo .inferior .span4 a i::before {
   content: "";
-  height: 1rem;
 }
 #cabecalho .conteiner .row-fluid .conteudo-topo .inferior .busca {
   border: 1px solid;
@@ -158,10 +169,10 @@ body {
   border: none;
   background-color: transparent;
   margin-left: 0.6rem;
+  cursor: pointer;
 }
 #cabecalho .conteiner .row-fluid .conteudo-topo .inferior .busca #form-buscar .icon-search::before {
   content: "";
-  height: 1rem;
 }
 #cabecalho .conteiner .row-fluid .conteudo-topo ul {
   list-style: none;

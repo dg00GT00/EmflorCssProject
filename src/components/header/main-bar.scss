@@ -1,7 +1,12 @@
 @use '../../base';
+@use '../../abstracts/variables' as v;
+@use '../../abstracts/functions' as f;
 
 .barra-inicial {
 	line-height: normal;
+	height: 4px;
+	width: v.$small-theme-width;
+	margin: auto;
 	.conteiner {
 		position: relative;
 		.row-fluid {
@@ -12,10 +17,10 @@
 				all: revert;
 			}
 			.canais-contato {
-                display: none; // !TEMPORARILY HIDDEN
+				// display: none; // !TEMPORARILY HIDDEN
 				position: absolute;
-				top: 92.4px; // * Controls position of the ".canais-contato" in relation to ".container". This value should be in px
-				right: 0;
+				top: 61.7px; // * Controls position of the ".canais-contato" in relation to ".container". This value should be in px
+				right: f.absolute-right-padding(22px) * 1%;
 				margin: 0;
 				width: auto;
 				ul {
@@ -26,18 +31,18 @@
 					*,
 					&::after {
 						@extend %default-revert;
-                    }
-                    i::before {
-                        margin-right: 0.5rem;
-                    }
+					}
+					i::before {
+						margin-right: 0.5rem;
+					}
 					li {
 						margin: 0;
 						padding: 0;
 						color: inherit;
 						&.tel-whatsapp {
 							position: absolute;
-							top: 110.8px; // * Controls the position in relation to "ul" tag. This value should be in px
-							right: 143.5%;
+							top: 84px; // * Controls the position in relation to "ul" tag. This value should be in px
+							right: 120%;
 							width: max-content;
 						}
 						i {

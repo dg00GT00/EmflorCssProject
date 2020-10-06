@@ -4,13 +4,16 @@
 @mixin superior-menu() {
 	.superior {
 		display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        align-items: center;
+		grid-template-columns: repeat(2, 1fr);
+		align-items: center;
 		width: 100%;
+		border-top: 1px solid;
+		padding-top: 1.3rem;
 		.acoes-conta {
 			display: flex;
 			li {
-				flex: auto;
+                // flex: auto;
+                width: 37%;
 				display: flex;
 				align-items: center;
 				&:first-child {
@@ -43,7 +46,6 @@
 				align-items: center;
 				i::before {
 					content: "\f07a";
-					height: v.$pseudo-icon-font-size;
 				}
 			}
 		}
@@ -56,17 +58,17 @@
 				display: flex;
 				align-items: center;
 				#auto-complete {
-                    border: none;
-                    flex: auto;
+					border: none;
+					flex: auto;
 				}
 				.icon-search {
 					@extend %icon-font;
 					border: none;
-                    background-color: transparent;
-                    margin-left: .6rem;
+					background-color: transparent;
+                    margin-left: 0.6rem;
+                    cursor: pointer;
 					&::before {
 						content: "\f002";
-						height: v.$pseudo-icon-font-size;
 					}
 				}
 			}
@@ -90,6 +92,14 @@
 			}
 			.span3 {
 				grid-row: logo;
+				justify-self: center;
+				.logo {
+					height: 190px;
+					* {
+						display: inline-block;
+						height: inherit;
+					}
+				}
 			}
 			.conteudo-topo {
 				grid-row: menus;
