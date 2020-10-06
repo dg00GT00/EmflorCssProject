@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url(http://fonts.googleapis.com/css2?family=Nunito:wght@400);
 *, *::before, *::after {
   margin: 0;
@@ -5,7 +6,7 @@
   box-sizing: border-box;
 }
 
-#cabecalho .conteiner .row-fluid .conteudo-topo .superior .acoes-conta li:first-child .icon-list, .barra-inicial .conteiner .row-fluid .canais-contato ul li i {
+#cabecalho .conteiner .row-fluid .conteudo-topo .inferior .busca #form-buscar .icon-search, #cabecalho .conteiner .row-fluid .conteudo-topo i, .barra-inicial .conteiner .row-fluid .canais-contato ul li i {
   font-family: "FontAwesome-v4";
   font-weight: initial;
   font-style: initial;
@@ -103,13 +104,24 @@ body {
 #cabecalho .conteiner .row-fluid .conteudo-topo .superior {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  align-items: center;
   width: 100%;
 }
 #cabecalho .conteiner .row-fluid .conteudo-topo .superior .acoes-conta {
   display: flex;
 }
-#cabecalho .conteiner .row-fluid .conteudo-topo .superior .acoes-conta li:first-child {
+#cabecalho .conteiner .row-fluid .conteudo-topo .superior .acoes-conta li {
   flex: auto;
+  display: flex;
+  align-items: center;
+}
+#cabecalho .conteiner .row-fluid .conteudo-topo .superior .acoes-conta li:first-child i::before {
+  content: "";
+  height: 1rem;
+}
+#cabecalho .conteiner .row-fluid .conteudo-topo .superior .acoes-conta li:nth-child(2) i::before {
+  content: "";
+  height: 1rem;
 }
 #cabecalho .conteiner .row-fluid .conteudo-topo .inferior {
   display: grid;
@@ -120,11 +132,45 @@ body {
 #cabecalho .conteiner .row-fluid .conteudo-topo .inferior .span4 {
   justify-self: end;
 }
+#cabecalho .conteiner .row-fluid .conteudo-topo .inferior .span4 a {
+  display: flex;
+  align-items: center;
+}
+#cabecalho .conteiner .row-fluid .conteudo-topo .inferior .span4 a i::before {
+  content: "";
+  height: 1rem;
+}
+#cabecalho .conteiner .row-fluid .conteudo-topo .inferior .busca {
+  border: 1px solid;
+  padding: 0.6rem;
+  padding-right: 0.8rem;
+  padding-left: 0.8rem;
+}
+#cabecalho .conteiner .row-fluid .conteudo-topo .inferior .busca #form-buscar {
+  display: flex;
+  align-items: center;
+}
+#cabecalho .conteiner .row-fluid .conteudo-topo .inferior .busca #form-buscar #auto-complete {
+  border: none;
+  flex: auto;
+}
+#cabecalho .conteiner .row-fluid .conteudo-topo .inferior .busca #form-buscar .icon-search {
+  border: none;
+  background-color: transparent;
+  margin-left: 0.6rem;
+}
+#cabecalho .conteiner .row-fluid .conteudo-topo .inferior .busca #form-buscar .icon-search::before {
+  content: "";
+  height: 1rem;
+}
 #cabecalho .conteiner .row-fluid .conteudo-topo ul {
   list-style: none;
 }
 #cabecalho .conteiner .row-fluid .conteudo-topo ul * {
   display: inline-block;
+}
+#cabecalho .conteiner .row-fluid .conteudo-topo i {
+  margin-right: 0.5rem;
 }
 #cabecalho .conteiner .row-fluid a {
   color: initial;

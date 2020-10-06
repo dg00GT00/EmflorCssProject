@@ -1,4 +1,78 @@
 @use '../../base';
+@use '../../abstracts/variables' as v;
+
+@mixin superior-menu() {
+	.superior {
+		display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+		width: 100%;
+		.acoes-conta {
+			display: flex;
+			li {
+				flex: auto;
+				display: flex;
+				align-items: center;
+				&:first-child {
+					i::before {
+						content: "\f03a";
+						height: v.$pseudo-icon-font-size;
+					}
+				}
+				&:nth-child(2) {
+					i::before {
+						content: "\f007";
+						height: v.$pseudo-icon-font-size;
+					}
+				}
+			}
+		}
+	}
+}
+
+@mixin inferior-menu() {
+	.inferior {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		width: 100%;
+		align-items: center;
+		.span4 {
+			justify-self: end;
+			a {
+				display: flex;
+				align-items: center;
+				i::before {
+					content: "\f07a";
+					height: v.$pseudo-icon-font-size;
+				}
+			}
+		}
+		.busca {
+			border: 1px solid;
+			padding: 0.6rem;
+			padding-right: 0.8rem;
+			padding-left: 0.8rem;
+			#form-buscar {
+				display: flex;
+				align-items: center;
+				#auto-complete {
+                    border: none;
+                    flex: auto;
+				}
+				.icon-search {
+					@extend %icon-font;
+					border: none;
+                    background-color: transparent;
+                    margin-left: .6rem;
+					&::before {
+						content: "\f002";
+						height: v.$pseudo-icon-font-size;
+					}
+				}
+			}
+		}
+	}
+}
 
 #cabecalho {
 	.conteiner {
@@ -22,34 +96,17 @@
 				display: grid;
 				align-items: center;
 				justify-items: center;
-				.superior {
-					display: grid;
-					grid-template-columns: repeat(2, 1fr);
-					width: 100%;
-					.acoes-conta {
-						display: flex;
-						li:first-child {
-							flex: auto;
-							.icon-list {
-								@extend %icon-font;
-							}
-						}
-					}
-				}
-				.inferior {
-					display: grid;
-					grid-template-columns: repeat(2, 1fr);
-					width: 100%;
-					align-items: center;
-					.span4 {
-						justify-self: end;
-					}
-				}
+				@include superior-menu();
+				@include inferior-menu();
 				ul {
 					list-style: none;
 					* {
 						display: inline-block;
 					}
+				}
+				i {
+					@extend %icon-font;
+					margin-right: 0.5rem;
 				}
 			}
 			a {
