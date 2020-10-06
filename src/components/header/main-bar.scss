@@ -14,6 +14,7 @@
 				all: revert;
 			}
 			.canais-contato {
+                display: none; // TEMPORARILY HIDDEN
 				position: absolute;
 				top: 92.4px; // Controls position of the ".canais-contato" in relation to ".container". This value should be in px
 				right: 0;

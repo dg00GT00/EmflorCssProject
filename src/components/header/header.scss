@@ -2,72 +2,59 @@
 
 #cabecalho {
 	.conteiner {
+		display: grid;
 		.row-fluid {
-            display: flex;
-			* {
+			display: grid;
+			grid-template-areas: "logo menus";
+			grid-template-columns: 0.2fr 1fr;
+			*,
+			*::before,
+			*::after {
 				all: revert;
-				display: inline-block;
-				text-decoration: none;
-			}
-
-			i {
-				@extend %icon-font;
-			}
-
-			// & {
-			// 	display: flex;
-			// }
-
-			h1.logo {
 				margin: 0;
-				a {
-					display: block;
+				padding: 0;
+			}
+			.span3 {
+				grid-row: logo;
+			}
+			.conteudo-topo {
+				grid-row: menus;
+				display: grid;
+				align-items: center;
+				justify-items: center;
+				.superior {
+					display: grid;
+					grid-template-columns: repeat(2, 1fr);
+					width: 100%;
+					.acoes-conta {
+						display: flex;
+						li:first-child {
+							flex: auto;
+							.icon-list {
+								@extend %icon-font;
+							}
+						}
+					}
+				}
+				.inferior {
+					display: grid;
+					grid-template-columns: repeat(2, 1fr);
+					width: 100%;
+					align-items: center;
+					.span4 {
+						justify-self: end;
+					}
+				}
+				ul {
+					list-style: none;
+					* {
+						display: inline-block;
+					}
 				}
 			}
-
-			.conteudo-topo.span9 {
-				display: flex;
-				flex-direction: column;
-				justify-content: space-evenly;
-				width: 100%;
-
-				* {
-					color: initial;
-				}
-
-				[class^="icon-"]::before {
-					margin-right: 0.5rem;
-				}
-
-				.span8 {
-					align-self: center;
-				}
-
-				.span4 {
-					align-self: center;
-					margin-left: auto;
-					width: 50%;
-
-					ul:first-of-type {
-						margin: 0;
-						padding: 0;
-						display: flex;
-						li {
-							display: flex;
-							flex: auto;
-							align-items: center;
-						}
-					}
-
-					.carrinho {
-						display: flex;
-						justify-content: flex-end;
-						a {
-							display: flex;
-							align-content: center;
-						}
-					}
-				}
+			a {
+				color: initial;
+				text-decoration: none;
 			}
 		}
 	}
