@@ -24,7 +24,7 @@ body, #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n) strong, #c
   font-weight: 400;
 }
 
-#cabecalho .conteiner .menu.superior, #cabecalho .conteiner .menu.superior *,
+#rodape .pagamento-selos .row-fluid .span4.selos *, #cabecalho .conteiner .menu.superior, #cabecalho .conteiner .menu.superior *,
 #cabecalho .conteiner .menu.superior *::before,
 #cabecalho .conteiner .menu.superior *::after, #cabecalho .conteiner .menu.superior .nivel-um .nivel-dois.borda-alpha *,
 #cabecalho .conteiner .menu.superior .nivel-um .nivel-dois.borda-alpha *::before,
@@ -336,7 +336,7 @@ body {
 #corpo .conteiner .row-fluid #listagemProdutos ul .listagem-linha .span3 .listagem-item .acoes-produto {
   border: none;
   padding: 0;
-  background-color: none;
+  background-color: transparent;
 }
 #corpo .conteiner .row-fluid #listagemProdutos ul .listagem-linha .span3:hover {
   border-radius: 5px;
@@ -348,4 +348,30 @@ body {
 }
 #corpo .conteiner .row-fluid #listagemProdutos ul .listagem-linha .span3:hover .imagem-produto img {
   filter: contrast(0.9) opacity(0.8);
+}
+
+#rodape .links-rodape ul li {
+  list-style: none;
+}
+#rodape .links-rodape ul li a {
+  text-decoration: none;
+}
+#rodape .pagamento-selos .row-fluid {
+  display: flex;
+  flex-direction: column;
+}
+#rodape .pagamento-selos .row-fluid .span4.selos {
+  all: revert;
+}
+#rodape .pagamento-selos .row-fluid .span4.selos ul {
+  list-style: none;
+}
+#rodape .pagamento-selos .row-fluid .span4.selos span.titulo {
+  display: none;
+}
+#rodape .pagamento-selos .pagamento {
+  width: auto;
+}
+#rodape .pagamento-selos .pagamento .gateways-rodape {
+  border: none;
 }

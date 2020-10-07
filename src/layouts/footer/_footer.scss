@@ -1,0 +1,38 @@
+@use '../../base';
+
+#rodape {
+	.links-rodape {
+		ul {
+			li {
+				list-style: none;
+				a {
+					text-decoration: none;
+				}
+			}
+		}
+	}
+	.pagamento-selos {
+		.row-fluid {
+			display: flex;
+			flex-direction: column;
+			.span4.selos {
+                all: revert;
+				& * {
+					@extend %default-revert
+				}
+                ul {
+                    list-style: none;
+                }
+                span.titulo {
+                    display: none;
+                }
+			}
+        }
+        .pagamento {
+            width: auto;
+            .gateways-rodape {
+                border: none;
+            }
+        }
+	}
+}
