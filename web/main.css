@@ -50,7 +50,7 @@ body, #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n) strong, #c
 .barra-inicial .conteiner .row-fluid .canais-contato {
   position: absolute;
   top: 61.7px;
-  right: 2.2448979592%;
+  left: min(87.8vw, 88.4%);
   margin: 0;
   width: auto;
 }

@@ -20,7 +20,7 @@
 				// display: none; // !TEMPORARILY HIDDEN
 				position: absolute;
 				top: 61.7px; // * Controls position of the ".canais-contato" in relation to ".container". This value should be in px
-				right: f.absolute-right-padding(22px) * 1%;
+				left: min(87.8vw, 88.4%);
 				margin: 0;
 				width: auto;
 				ul {
