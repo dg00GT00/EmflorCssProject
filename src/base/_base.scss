@@ -3,3 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+// Banner drop shadow
+.conteiner-principal .conteiner {
+    box-shadow: none; // * reset;
+    padding: 10px 0;
+}

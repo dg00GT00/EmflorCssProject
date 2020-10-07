@@ -6,7 +6,12 @@
   box-sizing: border-box;
 }
 
-#cabecalho .conteiner .row-fluid .conteudo-topo .inferior .busca #form-buscar .icon-search, #cabecalho .conteiner .row-fluid .conteudo-topo i, #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n), .barra-inicial .conteiner .row-fluid .canais-contato ul li i {
+.conteiner-principal .conteiner {
+  box-shadow: none;
+  padding: 10px 0;
+}
+
+#corpo .conteiner .row-fluid #listagemProdutos.borda-alpha .titulo-categoria strong::before, #corpo .conteiner .row-fluid #listagemProdutos.borda-alpha .titulo-categoria strong::after, #cabecalho .conteiner .row-fluid .conteudo-topo .inferior .busca #form-buscar .icon-search, #cabecalho .conteiner .row-fluid .conteudo-topo i, #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n), .barra-inicial .conteiner .row-fluid .canais-contato ul li i {
   font-family: "FontAwesome-v4";
   font-weight: initial;
   font-style: initial;
@@ -120,7 +125,7 @@ body, #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n) strong, #c
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   width: 100%;
-  border-top: 1px solid;
+  border-top: 1px solid #0000000f;
   padding-top: 1.3rem;
 }
 #cabecalho .conteiner .row-fluid .conteudo-topo .superior .acoes-conta {
@@ -156,7 +161,7 @@ body, #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n) strong, #c
   content: "";
 }
 #cabecalho .conteiner .row-fluid .conteudo-topo .inferior .busca {
-  border: 1px solid;
+  border: 1px solid #0000000f;
   padding: 0.6rem;
   padding-right: 0.8rem;
   padding-left: 0.8rem;
@@ -208,6 +213,7 @@ body, #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n) strong, #c
   justify-content: space-evenly;
   height: 50px;
   text-align: center;
+  border-top: 1px solid #0000000f;
 }
 #cabecalho .conteiner .menu.superior .nivel-um li {
   height: inherit;
@@ -264,5 +270,82 @@ body, #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n) strong, #c
   justify-content: center;
 }
 #cabecalho .conteiner .menu.superior .nivel-um .nivel-dois.borda-alpha li:nth-child(2n) {
-  border-top: 1px solid rgba(0, 0, 0, 0.26);
+  border-top: 1px solid #0000000f;
+}
+.secao-banners .conteiner div:last-of-type img {
+  border-radius: 8px;
+}
+
+body {
+  background-color: initial;
+}
+
+#corpo .conteiner .row-fluid {
+  margin: 0;
+}
+#corpo .conteiner .row-fluid #listagemProdutos.borda-alpha {
+  border: none;
+}
+#corpo .conteiner .row-fluid #listagemProdutos.borda-alpha .titulo-categoria {
+  all: revert;
+  text-align: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #0000000f;
+}
+#corpo .conteiner .row-fluid #listagemProdutos.borda-alpha .titulo-categoria strong::before {
+  content: "";
+  margin-right: 5%;
+}
+#corpo .conteiner .row-fluid #listagemProdutos.borda-alpha .titulo-categoria strong::after {
+  content: "";
+  margin-left: 5%;
+}
+#corpo .conteiner .row-fluid #listagemProdutos ul .listagem-linha {
+  padding-top: 40px;
+}
+#corpo .conteiner .row-fluid #listagemProdutos ul .listagem-linha .span3 .listagem-item {
+  box-shadow: none;
+  border: none;
+  background-color: none;
+}
+#corpo .conteiner .row-fluid #listagemProdutos ul .listagem-linha .span3 .listagem-item .info-produto {
+  all: revert;
+  text-align: center;
+  padding: 0 10px;
+}
+#corpo .conteiner .row-fluid #listagemProdutos ul .listagem-linha .span3 .listagem-item .info-produto a {
+  max-height: 55px;
+  min-height: 55px;
+  overflow: hidden;
+  margin: 10px 0;
+}
+#corpo .conteiner .row-fluid #listagemProdutos ul .listagem-linha .span3 .listagem-item .info-produto > div {
+  border-top: 1px solid #0000000f;
+  padding: 20px 0;
+  margin: 10px 0;
+}
+#corpo .conteiner .row-fluid #listagemProdutos ul .listagem-linha .span3 .listagem-item .info-produto > div strong {
+  font-size: 1.3rem;
+}
+#corpo .conteiner .row-fluid #listagemProdutos ul .listagem-linha .span3 .listagem-item:hover {
+  outline: none;
+}
+#corpo .conteiner .row-fluid #listagemProdutos ul .listagem-linha .span3 .listagem-item:hover .acoes-produto {
+  bottom: 32.6%;
+}
+#corpo .conteiner .row-fluid #listagemProdutos ul .listagem-linha .span3 .listagem-item .acoes-produto {
+  border: none;
+  padding: 0;
+  background-color: none;
+}
+#corpo .conteiner .row-fluid #listagemProdutos ul .listagem-linha .span3:hover {
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px #00000030;
+  background-color: #c4c4c436;
+}
+#corpo .conteiner .row-fluid #listagemProdutos ul .listagem-linha .span3:hover .info-produto a {
+  visibility: hidden;
+}
+#corpo .conteiner .row-fluid #listagemProdutos ul .listagem-linha .span3:hover .imagem-produto img {
+  filter: contrast(0.9) opacity(0.8);
 }

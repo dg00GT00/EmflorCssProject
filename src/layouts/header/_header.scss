@@ -7,7 +7,7 @@
 		grid-template-columns: repeat(2, 1fr);
 		align-items: center;
 		width: 100%;
-		border-top: 1px solid;
+		border-top: v.$default-border-style;
 		padding-top: 1.3rem;
 		.acoes-conta {
 			display: flex;
@@ -50,7 +50,7 @@
 			}
 		}
 		.busca {
-			border: 1px solid;
+			border: v.$default-border-style;
 			padding: 0.6rem;
 			padding-right: 0.8rem;
             padding-left: 0.8rem;
@@ -83,7 +83,8 @@
 		align-items: center;
 		justify-content: space-evenly;
 		height: 50px;
-		text-align: center;
+        text-align: center;
+        border-top: v.$default-border-style;
 		li {
 			height: inherit;
 			flex: auto;
@@ -146,7 +147,7 @@
 				justify-content: center;
 			}
 			li:nth-child(2n) {
-				border-top: 1px solid rgba(0, 0, 0, 0.26);
+				border-top: v.$default-border-style;
 			}
 			a {
 				@extend %main-font;
