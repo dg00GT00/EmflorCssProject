@@ -233,6 +233,7 @@ body, #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n) strong, #c
 #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n)::before, #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n)::after {
   content: "";
   margin: auto 0;
+  opacity: 0.3;
 }
 #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n)::before {
   margin-right: auto;
@@ -294,10 +295,12 @@ body {
 }
 #corpo .conteiner .row-fluid #listagemProdutos.borda-alpha .titulo-categoria strong::before {
   content: "";
+  opacity: 0.3;
   margin-right: 5%;
 }
 #corpo .conteiner .row-fluid #listagemProdutos.borda-alpha .titulo-categoria strong::after {
   content: "";
+  opacity: 0.3;
   margin-left: 5%;
 }
 #corpo .conteiner .row-fluid #listagemProdutos ul .listagem-linha {
