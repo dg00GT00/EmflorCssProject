@@ -6,7 +6,8 @@
 	line-height: normal;
 	height: 4px;
 	width: v.$small-theme-width;
-	margin: auto;
+    margin: auto;
+    width: v.$small-theme-width - 2 * v.$small-theme-overall-padding;
 	.conteiner {
 		position: relative;
 		.row-fluid {
@@ -20,7 +21,7 @@
 				// display: none; // !TEMPORARILY HIDDEN
 				position: absolute;
 				top: 61.7px; // * Controls position of the ".canais-contato" in relation to ".container". This value should be in px
-				left: min(87.8vw, 88.4%);
+				left: min(82.9vw, 87.6%);;
 				margin: 0;
 				width: auto;
 				ul {
@@ -41,7 +42,7 @@
 						color: inherit;
 						&.tel-whatsapp {
 							position: absolute;
-							top: 84px; // * Controls the position in relation to "ul" tag. This value should be in px
+							top: 85px; // * Controls the position in relation to "ul" tag. This value should be in px
 							right: 120%;
 							width: max-content;
 						}

@@ -12,7 +12,6 @@
 		.acoes-conta {
 			display: flex;
 			li {
-				// flex: auto;
 				width: 37%;
 				display: flex;
 				align-items: center;
@@ -53,8 +52,8 @@
 			border: v.$default-border-style;
 			padding: 0.6rem;
 			padding-right: 0.8rem;
-            padding-left: 0.8rem;
-            border-radius: 5px;
+			padding-left: 0.8rem;
+			border-radius: 5px;
 			#form-buscar {
 				display: flex;
 				align-items: center;
@@ -73,6 +72,9 @@
 					}
 				}
 			}
+            &:focus-within {
+                border: 1.5px solid bisque; // ? Temporary value
+            }
 		}
 	}
 }
@@ -83,8 +85,8 @@
 		align-items: center;
 		justify-content: space-evenly;
 		height: 50px;
-        text-align: center;
-        border-top: v.$default-border-style;
+		text-align: center;
+		border-top: v.$default-border-style;
 		li {
 			height: inherit;
 			flex: auto;
@@ -102,8 +104,9 @@
 				&::before,
 				&::after {
 					content: "\f06c";
-                    margin: auto 0;
-                    opacity: 0.3;
+					margin: auto 0;
+					opacity: 0.3;
+					font-size: 0.9rem;
 				}
 				&::before {
 					margin-right: auto;
@@ -115,11 +118,11 @@
 					@extend %main-font;
 				}
 			}
-            &:hover {
-                a + ul.nivel-dois {
-                    display: block;
-                }
-            }
+			&:hover {
+				a + ul.nivel-dois {
+					display: block;
+				}
+			}
 		}
 		.nivel-dois.borda-alpha {
 			*,

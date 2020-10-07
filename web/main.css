@@ -8,7 +8,7 @@
 
 .conteiner-principal .conteiner {
   box-shadow: none;
-  padding: 10px 0;
+  padding: 10px 30px;
 }
 
 #corpo .conteiner .row-fluid #listagemProdutos.borda-alpha .titulo-categoria strong::before, #corpo .conteiner .row-fluid #listagemProdutos.borda-alpha .titulo-categoria strong::after, #cabecalho .conteiner .row-fluid .conteudo-topo .inferior .busca #form-buscar .icon-search, #cabecalho .conteiner .row-fluid .conteudo-topo i, #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n), .barra-inicial .conteiner .row-fluid .canais-contato ul li i {
@@ -40,6 +40,7 @@ body, #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n) strong, #c
   height: 4px;
   width: 980px;
   margin: auto;
+  width: 920px;
 }
 .barra-inicial .conteiner {
   position: relative;
@@ -50,7 +51,7 @@ body, #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n) strong, #c
 .barra-inicial .conteiner .row-fluid .canais-contato {
   position: absolute;
   top: 61.7px;
-  left: min(87.8vw, 88.4%);
+  left: min(82.9vw, 87.6%);
   margin: 0;
   width: auto;
 }
@@ -69,7 +70,7 @@ body, #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n) strong, #c
 }
 .barra-inicial .conteiner .row-fluid .canais-contato ul li.tel-whatsapp {
   position: absolute;
-  top: 84px;
+  top: 85px;
   right: 120%;
   width: max-content;
 }
@@ -184,6 +185,9 @@ body, #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n) strong, #c
 #cabecalho .conteiner .row-fluid .conteudo-topo .inferior .busca #form-buscar .icon-search::before {
   content: "";
 }
+#cabecalho .conteiner .row-fluid .conteudo-topo .inferior .busca:focus-within {
+  border: 1.5px solid bisque;
+}
 #cabecalho .conteiner .row-fluid .conteudo-topo ul {
   list-style: none;
 }
@@ -234,6 +238,7 @@ body, #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n) strong, #c
   content: "";
   margin: auto 0;
   opacity: 0.3;
+  font-size: 0.9rem;
 }
 #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n)::before {
   margin-right: auto;
