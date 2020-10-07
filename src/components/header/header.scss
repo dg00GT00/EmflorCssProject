@@ -53,7 +53,8 @@
 			border: 1px solid;
 			padding: 0.6rem;
 			padding-right: 0.8rem;
-			padding-left: 0.8rem;
+            padding-left: 0.8rem;
+            border-radius: 5px;
 			#form-buscar {
 				display: flex;
 				align-items: center;
@@ -83,14 +84,10 @@
 		justify-content: space-evenly;
 		height: 50px;
 		text-align: center;
-		// &:hover ul:first-of-type {
-		// 	display: block; // * Menus floating boxes
-		// 	// background-color: white; // * Temporary setting
-		// }
 		li {
 			height: inherit;
 			flex: auto;
-            position: relative;
+			position: relative;
 			a {
 				position: absolute;
 				top: 50%;
@@ -116,39 +113,44 @@
 					@extend %main-font;
 				}
 			}
-        }
+            &:hover {
+                a + ul.nivel-dois {
+                    display: block;
+                }
+            }
+		}
 		.nivel-dois.borda-alpha {
 			*,
 			*::before,
 			*::after {
-                @extend %default-revert;
+				@extend %default-revert;
 				text-decoration: none;
 				list-style: none;
 				color: initial;
-            }
-            display: none;
+			}
+			display: none;
 			position: absolute;
 			top: 100%;
 			left: 50%;
-            width: 65%;
+			width: 65%;
 			background-color: white; // * Temporary setting
 			transform: translateX(-50%);
 			box-shadow: 1px 3px 2px 0px #00000052;
 			border-radius: 3px;
-            padding: 0 20px;
-            border-top: 2px solid;
+			padding: 0 20px;
+			border-top: 2px solid;
 			li {
 				height: 50px;
 				display: flex;
 				align-items: center;
-                justify-content: center;
-            }
-            li:nth-child(2n){
-                border-top: 1px solid rgba(0, 0, 0, 0.26);
-            }
-            a {
-                @extend %main-font;
-            }
+				justify-content: center;
+			}
+			li:nth-child(2n) {
+				border-top: 1px solid rgba(0, 0, 0, 0.26);
+			}
+			a {
+				@extend %main-font;
+			}
 		}
 	}
 }

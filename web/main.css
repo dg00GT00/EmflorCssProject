@@ -160,6 +160,7 @@ body, #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n) strong, #c
   padding: 0.6rem;
   padding-right: 0.8rem;
   padding-left: 0.8rem;
+  border-radius: 5px;
 }
 #cabecalho .conteiner .row-fluid .conteudo-topo .inferior .busca #form-buscar {
   display: flex;
@@ -232,6 +233,9 @@ body, #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n) strong, #c
 }
 #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n)::after {
   margin-left: auto;
+}
+#cabecalho .conteiner .menu.superior .nivel-um li:hover a + ul.nivel-dois {
+  display: block;
 }
 #cabecalho .conteiner .menu.superior .nivel-um .nivel-dois.borda-alpha {
   display: none;
