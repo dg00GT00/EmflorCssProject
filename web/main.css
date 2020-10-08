@@ -11,7 +11,7 @@
   padding: 10px 30px;
 }
 
-#corpo .conteiner .row-fluid #listagemProdutos.borda-alpha .titulo-categoria strong::before, #corpo .conteiner .row-fluid #listagemProdutos.borda-alpha .titulo-categoria strong::after, #cabecalho .conteiner .row-fluid .conteudo-topo .inferior .busca #form-buscar .icon-search, #cabecalho .conteiner .row-fluid .conteudo-topo i, #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n), .barra-inicial .conteiner .row-fluid .canais-contato ul li i {
+#corpo .conteiner .row-fluid #listagemProdutos.borda-alpha .titulo-categoria strong::before, #corpo .conteiner .row-fluid #listagemProdutos.borda-alpha .titulo-categoria strong::after, #cabecalho .conteiner .row-fluid .conteudo-topo .inferior .span8 a, #cabecalho .conteiner .row-fluid .conteudo-topo .inferior .busca #form-buscar .icon-search, #cabecalho .conteiner .row-fluid .conteudo-topo i, #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n), .barra-inicial .conteiner .row-fluid .canais-contato ul li i {
   font-family: "FontAwesome-v4";
   font-weight: initial;
   font-style: initial;
@@ -217,7 +217,7 @@ body, #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n) strong, #c
   content: "";
   height: 1.2rem;
 }
-@media (max-width: 767px) {
+@media (max-width: 968px) {
   #cabecalho .conteiner .row-fluid .conteudo-topo .superior {
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: none;
@@ -234,11 +234,15 @@ body, #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n) strong, #c
 #cabecalho .conteiner .row-fluid .conteudo-topo .inferior .span8 {
   margin: 0 10px;
 }
+#cabecalho .conteiner .row-fluid .conteudo-topo .inferior .span8 a {
+  margin-left: 15px;
+}
 @media (max-width: 767px) {
   #cabecalho .conteiner .row-fluid .conteudo-topo .inferior .span8 {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
+    margin: 15px 0;
   }
   #cabecalho .conteiner .row-fluid .conteudo-topo .inferior .span8 div {
     flex: auto;
