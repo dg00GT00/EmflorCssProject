@@ -1,6 +1,12 @@
 @use '../../base';
 @use '../../abstracts/variables' as v;
 
+/* This mixin represents the following group of elements
+*    - Login text
+*    - My account
+*    - My requests
+*    - Talk with us
+ */
 @mixin header-superior-fields() {
 	.superior {
 		display: grid;
@@ -32,6 +38,11 @@
 	}
 }
 
+/* This mixin represents the following group of elements
+*    - Search bar
+*    - Phone and Whatsapp contacts
+*    - Purchase basket
+ */
 @mixin header-inferior-fields() {
 	.inferior {
 		display: grid;
@@ -79,6 +90,11 @@
 	}
 }
 
+/* This mixin represents the following group of elements
+*   - Categories menu level one
+*   - Categories menu level two
+    This mixin is a sub mixin of the 'superior-menu'
+ */
 @mixin superior-menu-levels() {
 	.nivel-um {
 		display: flex;
@@ -160,6 +176,9 @@
 	}
 }
 
+/* This mixin represents the following group of elements
+*    - Categories menu group set
+ */
 @mixin superior-menu() {
 	.menu.superior {
 		@extend %default-revert;
@@ -176,6 +195,9 @@
 	}
 }
 
+/* 
+* Main Header Selectors
+*/
 #cabecalho {
 	.conteiner {
 		display: grid;

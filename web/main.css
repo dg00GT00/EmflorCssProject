@@ -89,6 +89,28 @@ body, #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n) strong, #c
   align-items: center;
 }
 
+/* This mixin represents the following group of elements
+*    - Login text
+*    - My account
+*    - My requests
+*    - Talk with us
+ */
+/* This mixin represents the following group of elements
+*    - Search bar
+*    - Phone and Whatsapp contacts
+*    - Purchase basket
+ */
+/* This mixin represents the following group of elements
+*   - Categories menu level one
+*   - Categories menu level two
+    This mixin is a sub mixin of the 'superior-menu'
+ */
+/* This mixin represents the following group of elements
+*    - Categories menu group set
+ */
+/* 
+* Main Header Selectors
+*/
 #cabecalho .conteiner {
   display: grid;
 }
