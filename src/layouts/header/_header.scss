@@ -182,7 +182,10 @@
 			}
 			&:hover {
 				a + ul.nivel-dois {
-					display: block;
+                    display: block;
+                    @media (max-width: map.get(v.$max-width-media-queries, "mobile")) {
+                        display: none;
+                    }
 				}
 			}
 		}

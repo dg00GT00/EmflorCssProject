@@ -385,6 +385,11 @@ body, #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n) strong, #c
 #cabecalho .conteiner .menu.superior .nivel-um li:hover a + ul.nivel-dois {
   display: block;
 }
+@media (max-width: 767px) {
+  #cabecalho .conteiner .menu.superior .nivel-um li:hover a + ul.nivel-dois {
+    display: none;
+  }
+}
 #cabecalho .conteiner .menu.superior .nivel-um .nivel-dois.borda-alpha {
   display: none;
   position: absolute;
