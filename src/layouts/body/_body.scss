@@ -1,4 +1,5 @@
 @use '../../base';
+@use 'sass:map';
 @use '../../abstracts/variables' as v;
 
 body {
@@ -8,86 +9,117 @@ body {
 
 /* The release section title */
 @mixin releases() {
-    .titulo-categoria {
-        all: revert;
-        text-align: center;
-        padding: 10px 0;
-        border-bottom: v.$default-border-style;
-        strong {
-            &::before {
-                @extend %icon-font;
-                content: "\f1bb";
-                opacity: 0.3;
-                margin-right: 5%;
-            }
-            &::after {
-                @extend %icon-font;
-                content: "\f1bb";
-                opacity: 0.3;
-                margin-left: 5%;
-            }
-        }
-    }
+	.titulo-categoria {
+		all: revert;
+		text-align: center;
+		padding: 10px 0;
+		border-bottom: v.$default-border-style;
+		strong {
+			&::before {
+				@extend %icon-font;
+				content: "\f1bb";
+				opacity: 0.3;
+				margin-right: 5%;
+			}
+			&::after {
+				@extend %icon-font;
+				content: "\f1bb";
+				opacity: 0.3;
+				margin-left: 5%;
+			}
+		}
+	}
 }
 /* The indeed list of products */
 @mixin list_of_products() {
-    ul {
-        .listagem-linha {
-            // * products list
-            padding-top: 40px;
-            .span3 {
-                .listagem-item {
-                    box-shadow: none;
-                    border: none;
-                    background-color: none;
-                    .info-produto {
-                        all: revert;
-                        text-align: center;
-                        padding: 0 10px;
-                        a {
-                            // * The max-height and min-height should be equal to constraint the amount of text written in 'info-product' box
-                            max-height: 55px;
-                            min-height: 55px;
-                            overflow: hidden;
-                            margin: 10px 0;
+	ul {
+		.listagem-linha {
+			// * products list
+			padding-top: 40px;
+			.span3 {
+				.listagem-item {
+					// & *,
+					&::before,
+					&::after {
+						@extend %default-revert;
+					}
+					box-shadow: none;
+					border: none;
+					background-color: none;
+					display: flex;
+					flex-direction: column;
+					@media (max-width: map.get(v.$max-width-media-queries, "mobile")) {
+						flex-direction: row;
+					}
+					.info-produto {
+						all: revert;
+						text-align: center;
+						padding: 0 10px;
+						a {
+							// * The max-height and min-height should be equal to constraint the amount of text written in 'info-product' box
+							max-height: 55px;
+							min-height: 55px;
+							overflow: hidden;
+							margin: 10px 0;
                         }
-                        > div {
-                            border-top: v.$default-border-style;
-                            padding: 20px 0;
-                            margin: 10px 0;
-                            strong {
-                                font-size: 1.3rem;
+                        div:last-child {
+                            @media (max-width: map.get(v.$max-width-media-queries, "mobile")) {
+                                display: flex;
+                                justify-content: space-evenly;
                             }
                         }
-                    }
-                    &:hover {
-                        outline: none;
-                        .acoes-produto {
-                            bottom: 32.6%;
-                        }
-                    }
-                    .acoes-produto {
-                        border: none;
-                        padding: 0;
-                        background-color: transparent;
-                    }
-                }
-                &:hover {
-                    border-radius: 5px;
-                    box-shadow: 0px 0px 5px #00000030;
-                    background-color: #c4c4c436;
-                    .info-produto a {
-                        visibility: hidden;
-                    }
-                    .imagem-produto {
-                        img {
-                            filter: contrast(0.9) opacity(0.8);
-                        }
-                    }
-                }
-            }
-        }
-    }
+						> div {
+							border-top: v.$default-border-style;
+							padding: 20px 0;
+                            margin: 10px 0;
+							strong {
+								font-size: 1.3rem;
+								@media (max-width: map.get(v.$max-width-media-queries, "mobile")) {
+									&::after {
+										content: "Comprar";
+										padding: 10px;
+										background-color: rgba(117, 117, 117, 0.65);
+										border-radius: 7px;
+										margin-left: 2rem;
+									}
+								}
+							}
+						}
+					}
+					.acoes-produto-responsiva {
+						display: none !important;
+					}
+					&:hover {
+						outline: none;
+						.acoes-produto {
+							bottom: 32.6%;
+						}
+					}
+					.acoes-produto {
+						border: none;
+						padding: 0;
+						background-color: transparent;
+					}
+				}
+				&:hover {
+					border-radius: 5px;
+					box-shadow: 0px 0px 5px #00000030;
+					background-color: #c4c4c436;
+					.info-produto a {
+						visibility: hidden;
+						@media (max-width: map.get(v.$max-width-media-queries, "mobile")) {
+							visibility: visible;
+						}
+					}
+					.imagem-produto {
+						img {
+							filter: contrast(0.9) opacity(0.8);
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 /* List of products section */
@@ -98,7 +130,7 @@ body {
 			#listagemProdutos {
 				&.borda-alpha {
 					border: none; // * reset
-                    @include releases();
+					@include releases();
 				}
 				@include list_of_products();
 			}
