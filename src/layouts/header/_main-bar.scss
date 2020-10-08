@@ -2,6 +2,65 @@
 @use '../../abstracts/variables' as v;
 @use '../../abstracts/functions' as f;
 
+@mixin talk_with_us_whatsapp_contacts() {
+    .canais-contato {
+        // display: none; // !TEMPORARILY HIDDEN SWITCH
+        position: absolute;
+        /* 
+        Controls position of the "Talk with us" element in relation to ".container". 
+        This value should be in px.
+         */
+        top: 61.7px;
+        left: min(82.9vw, 87.6%);;
+        margin: 0;
+        width: auto;
+        ul {
+            @extend %default-revert;
+            position: relative;
+            list-style: none; // reset
+            color: initial; // * Controls the text color of ".canais-contato"
+            *,
+            &::after {
+                @extend %default-revert;
+            }
+            i::before {
+                margin-right: 0.5rem;
+            }
+            li {
+                margin: 0;
+                padding: 0;
+                color: inherit;
+                &.tel-whatsapp {
+                    position: absolute;
+                    /* 
+                    Controls the position in relation to "Whatsapp" element. 
+                    This value should be in px.
+                    */
+                    top: 85px;
+                    right: 120%;
+                    width: max-content;
+                }
+                i {
+                    @extend %icon-font;
+                    color: inherit;
+                }
+                span {
+                    color: inherit;
+                    display: flex;
+                    align-items: center;
+                }
+                a {
+                    text-decoration: none;
+                    color: inherit;
+                    display: flex;
+                    align-items: center;
+                }
+            }
+        }
+    }
+}
+
+/* The absolute positioned initial bar */
 .barra-inicial {
 	line-height: normal;
 	height: 4px;
@@ -17,53 +76,7 @@
 			& [class*="span"] {
 				all: revert;
 			}
-			.canais-contato {
-				// display: none; // !TEMPORARILY HIDDEN SWITCH
-				position: absolute;
-				top: 61.7px; // * Controls position of the ".canais-contato" in relation to ".container". This value should be in px
-				left: min(82.9vw, 87.6%);;
-				margin: 0;
-				width: auto;
-				ul {
-					@extend %default-revert;
-					position: relative;
-					list-style: none; // reset
-					color: initial; // * Controls the text color of ".canais-contato"
-					*,
-					&::after {
-						@extend %default-revert;
-					}
-					i::before {
-						margin-right: 0.5rem;
-					}
-					li {
-						margin: 0;
-						padding: 0;
-						color: inherit;
-						&.tel-whatsapp {
-							position: absolute;
-							top: 85px; // * Controls the position in relation to "ul" tag. This value should be in px
-							right: 120%;
-							width: max-content;
-						}
-						i {
-							@extend %icon-font;
-							color: inherit;
-						}
-						span {
-							color: inherit;
-							display: flex;
-							align-items: center;
-						}
-						a {
-							text-decoration: none;
-							color: inherit;
-							display: flex;
-							align-items: center;
-						}
-					}
-				}
-			}
+			@include talk_with_us_whatsapp_contacts();
 		}
 	}
 }
