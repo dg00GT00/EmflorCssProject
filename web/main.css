@@ -328,14 +328,27 @@ body, #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n) strong, #c
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  height: 50px;
   text-align: center;
   border-top: 1px solid #0000000f;
 }
+@media (max-width: 767px) {
+  #cabecalho .conteiner .menu.superior .nivel-um {
+    border: none;
+    flex-direction: column;
+  }
+}
 #cabecalho .conteiner .menu.superior .nivel-um li {
-  height: inherit;
+  height: 50px;
   flex: auto;
   position: relative;
+}
+@media (max-width: 767px) {
+  #cabecalho .conteiner .menu.superior .nivel-um li {
+    border: 1px solid #0000000f !important;
+    border-radius: 5px !important;
+    width: 100%;
+    height: 40px;
+  }
 }
 #cabecalho .conteiner .menu.superior .nivel-um li a {
   position: absolute;
@@ -347,11 +360,21 @@ body, #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n) strong, #c
   display: flex;
   justify-content: center;
 }
+@media (max-width: 767px) {
+  #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n) {
+    margin: 5px 0;
+  }
+}
 #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n)::before, #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n)::after {
   content: "";
   margin: auto 0;
   opacity: 0.3;
   font-size: 0.9rem;
+}
+@media (max-width: 767px) {
+  #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n)::before, #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n)::after {
+    content: none;
+  }
 }
 #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n)::before {
   margin-right: auto;

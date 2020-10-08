@@ -15,38 +15,38 @@
 		align-items: center;
 		width: 100%;
 		border-top: v.$default-border-style;
-        padding-top: 1.3rem;
-        .span8 {
-            margin: 5px 0 5px 10px;
-        }
-        .acoes-conta {
-            display: flex;
-            width: max-content;
-            li {
-                display: flex;
-                align-items: center;
-                flex: auto;
-                &:first-child {
-                    margin-right: 17px;
-                    i::before {
-                        content: "\f03a";
-                        height: v.$pseudo-icon-font-size;
-                    }
-                }
-                &:nth-child(2) {
-                    i::before {
-                        content: "\f007";
-                        height: v.$pseudo-icon-font-size;
-                    }
-                }
-            }
-        }
-        @media (max-width: map.get(v.$max-width-media-queries, "968")) {
-                grid-template-rows: repeat(2, 1fr);
-                grid-template-columns: none;
-                justify-items: end;
-                padding-top: .7rem;
-        }
+		padding-top: 1.3rem;
+		.span8 {
+			margin: 5px 0 5px 10px;
+		}
+		.acoes-conta {
+			display: flex;
+			width: max-content;
+			li {
+				display: flex;
+				align-items: center;
+				flex: auto;
+				&:first-child {
+					margin-right: 17px;
+					i::before {
+						content: "\f03a";
+						height: v.$pseudo-icon-font-size;
+					}
+				}
+				&:nth-child(2) {
+					i::before {
+						content: "\f007";
+						height: v.$pseudo-icon-font-size;
+					}
+				}
+			}
+		}
+		@media (max-width: map.get(v.$max-width-media-queries, "968")) {
+			grid-template-rows: repeat(2, 1fr);
+			grid-template-columns: none;
+			justify-items: end;
+			padding-top: 0.7rem;
+		}
 	}
 }
 
@@ -60,23 +60,23 @@
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		width: 100%;
-        align-items: center;
-        .span8 {
-            margin: 0 10px;
-            a {
-                @extend %icon-font;
-                margin-left: 15px;
-            }
-            @media (max-width: map.get(v.$max-width-media-queries, "767")){
-                display: flex;
-                flex-direction: row-reverse;
-                align-items: center;
-                margin: 15px 0;
-                div {
-                    flex: auto;
-                }
-            }
-        }
+		align-items: center;
+		.span8 {
+			margin: 0 10px;
+			a {
+				@extend %icon-font;
+				margin-left: 15px;
+			}
+			@media (max-width: map.get(v.$max-width-media-queries, "mobile")) {
+				display: flex;
+				flex-direction: row-reverse;
+				align-items: center;
+				margin: 15px 0;
+				div {
+					flex: auto;
+				}
+			}
+		}
 		.span4 {
 			justify-self: end;
 			a {
@@ -114,10 +114,10 @@
 			&:focus-within {
 				border: 1.5px solid bisque; // ? Temporary value
 			}
-        }
-        @media (max-width: map.get(v.$max-width-media-queries, "968")){
-            grid-template-columns: 1fr auto;
-        }
+		}
+		@media (max-width: map.get(v.$max-width-media-queries, "968")) {
+			grid-template-columns: 1fr auto;
+		}
 	}
 }
 
@@ -131,13 +131,22 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-evenly;
-		height: 50px;
 		text-align: center;
 		border-top: v.$default-border-style;
+		@media (max-width: map.get(v.$max-width-media-queries, "mobile")) {
+            border: none;
+			flex-direction: column;
+		}
 		li {
-			height: inherit;
+            height: 50px;
 			flex: auto;
-			position: relative;
+            position: relative;
+            @media (max-width: map.get(v.$max-width-media-queries, "mobile")) {
+                border: v.$default-border-style !important;
+                border-radius: 5px !important;
+                width: 100%;
+                height: 40px;
+            }
 			a {
 				position: absolute;
 				top: 50%;
@@ -147,13 +156,19 @@
 			&:nth-child(2n) {
 				display: flex;
 				justify-content: center;
-				@extend %icon-font;
+                @extend %icon-font;
+                @media (max-width: map.get(v.$max-width-media-queries, "mobile")){
+                    margin: 5px 0;
+                }
 				&::before,
 				&::after {
 					content: "\f06c";
 					margin: auto 0;
-					opacity: 0.3;
-					font-size: 0.9rem;
+                    opacity: 0.3;
+                    font-size: 0.9rem;
+                    @media (max-width: map.get(v.$max-width-media-queries, "mobile")) {
+                        content: none;
+                    }
 				}
 				&::before {
 					margin-right: auto;
@@ -186,7 +201,7 @@
 			top: 100%;
 			left: 50%;
 			width: 65%;
-			background-color: white; // * Temporary setting
+			background-color: white; // ? Temporary setting
 			transform: translateX(-50%);
 			box-shadow: 1px 3px 2px 0px #00000052;
 			border-radius: 3px;
@@ -271,19 +286,19 @@
 				i {
 					@extend %icon-font;
 					margin-right: 0.5rem;
-                }
-                @media (max-width: map.get(v.$max-width-media-queries, "767")){
-                    grid-row: none;
-                }
+				}
+				@media (max-width: map.get(v.$max-width-media-queries, "mobile")) {
+					grid-row: none;
+				}
 			}
 			a {
 				color: initial;
 				text-decoration: none;
-            }
-            @media (max-width: map.get(v.$max-width-media-queries, "767")){
-                grid-template-areas: "logo";
-                grid-template-columns: none;
-            }
+			}
+			@media (max-width: map.get(v.$max-width-media-queries, "mobile")) {
+				grid-template-areas: "logo";
+				grid-template-columns: none;
+			}
 		}
 		@include superior-menu();
 	}
