@@ -225,8 +225,8 @@
 			grid-template-areas: "logo menus";
 			grid-template-columns: 0.2fr 1fr;
 			*,
-			*::before,
-			*::after {
+			&::before,
+			&::after {
 				all: revert;
 				margin: 0;
 				padding: 0;
@@ -258,12 +258,20 @@
 				i {
 					@extend %icon-font;
 					margin-right: 0.5rem;
-				}
+                }
+                @media (max-width: map.get(v.$max-width-media-queries, "767")){
+                    grid-row: none;
+                }
 			}
 			a {
 				color: initial;
 				text-decoration: none;
-			}
+            }
+            @media (max-width: map.get(v.$max-width-media-queries, "767")){
+                grid-template-areas: "logo";
+                // grid-template-rows: none;
+                grid-template-columns: none;
+            }
 		}
 		@include superior-menu();
 	}

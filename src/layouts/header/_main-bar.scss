@@ -63,7 +63,22 @@
         }
         @media (max-width : map.get(v.$max-width-media-queries, "968")) {
             left: min(83.2vw, 87.6%);
-            top: 112.1px
+            top: 112.1px;
+        }
+        @media (max-width : map.get(v.$max-width-media-queries, "954")) {
+            left: min(83.9vw, 87.6%);
+        }
+        @media (max-width : map.get(v.$max-width-media-queries, "932")) {
+            left: min(84vw, 87.6%);
+        }
+        @media (max-width : map.get(v.$max-width-media-queries, "862")) {
+            left: min(83.4vw, 87.6%);
+        }
+        @media (max-width : map.get(v.$max-width-media-queries, "862")) {
+            left: min(82.8vw, 87.6%);
+        }
+        @media (max-width : map.get(v.$max-width-media-queries, "792")) {
+            left: min(82vw, 87.6%);
         }
     }
 }

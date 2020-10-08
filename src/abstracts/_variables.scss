@@ -1,8 +1,16 @@
-$main-font: 'Nunito';
-$main-font-size: .9rem;
-$main-background-color: #7fbd57; 
+$main-font: "Nunito";
+$main-font-size: 0.9rem;
+$main-background-color: #7fbd57;
 $pseudo-icon-font-size: 1.2rem;
 $default-border-style: 1px solid #0000000f;
 $small-theme-width: 980px; // * Global width of the working theme
-$small-theme-overall-padding : 30px;
-$max-width-media-queries : ("968": 968px);
+$small-theme-overall-padding: 30px;
+$max-width-media-queries: (
+	"968": 968px,
+	"945": 954px,
+	"932": 932px,
+	"862": 862px,
+	"830": 830px,
+	"792": 792px,
+	"767": 767px,
+);

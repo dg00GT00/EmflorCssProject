@@ -108,6 +108,31 @@ body, #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n) strong, #c
     top: 112.1px;
   }
 }
+@media (max-width: ) {
+  .barra-inicial .conteiner .row-fluid .canais-contato {
+    left: min(83.9vw, 87.6%);
+  }
+}
+@media (max-width: 932px) {
+  .barra-inicial .conteiner .row-fluid .canais-contato {
+    left: min(84vw, 87.6%);
+  }
+}
+@media (max-width: 862px) {
+  .barra-inicial .conteiner .row-fluid .canais-contato {
+    left: min(83.4vw, 87.6%);
+  }
+}
+@media (max-width: 862px) {
+  .barra-inicial .conteiner .row-fluid .canais-contato {
+    left: min(82.8vw, 87.6%);
+  }
+}
+@media (max-width: 792px) {
+  .barra-inicial .conteiner .row-fluid .canais-contato {
+    left: min(82vw, 87.6%);
+  }
+}
 
 /* This mixin represents the following group of elements
 *    - Login text
@@ -139,9 +164,7 @@ body, #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n) strong, #c
   grid-template-areas: "logo menus";
   grid-template-columns: 0.2fr 1fr;
 }
-#cabecalho .conteiner .row-fluid *,
-#cabecalho .conteiner .row-fluid *::before,
-#cabecalho .conteiner .row-fluid *::after {
+#cabecalho .conteiner .row-fluid *, #cabecalho .conteiner .row-fluid::before, #cabecalho .conteiner .row-fluid::after {
   all: revert;
   margin: 0;
   padding: 0;
@@ -262,9 +285,20 @@ body, #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n) strong, #c
 #cabecalho .conteiner .row-fluid .conteudo-topo i {
   margin-right: 0.5rem;
 }
+@media (max-width: 767px) {
+  #cabecalho .conteiner .row-fluid .conteudo-topo {
+    grid-row: none;
+  }
+}
 #cabecalho .conteiner .row-fluid a {
   color: initial;
   text-decoration: none;
+}
+@media (max-width: 767px) {
+  #cabecalho .conteiner .row-fluid {
+    grid-template-areas: "logo";
+    grid-template-columns: none;
+  }
 }
 #cabecalho .conteiner .menu.superior {
   z-index: 10;
