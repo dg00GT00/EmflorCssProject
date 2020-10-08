@@ -41,7 +41,7 @@
                 }
             }
         }
-        @media (max-width: map.get(v.$max-width-media-queries, "968")) {
+        @media (max-width: map.get(v.$max-width-media-queries, "767")) {
                 grid-template-rows: repeat(2, 1fr);
                 grid-template-columns: none;
                 justify-items: end;
@@ -63,6 +63,14 @@
         align-items: center;
         .span8 {
             margin: 0 10px;
+            @media (max-width: map.get(v.$max-width-media-queries, "767")){
+                display: flex;
+                flex-direction: row-reverse;
+                align-items: center;
+                div {
+                    flex: auto;
+                }
+            }
         }
 		.span4 {
 			justify-self: end;
@@ -269,7 +277,6 @@
             }
             @media (max-width: map.get(v.$max-width-media-queries, "767")){
                 grid-template-areas: "logo";
-                // grid-template-rows: none;
                 grid-template-columns: none;
             }
 		}
