@@ -55,7 +55,7 @@ body, #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n) strong, #c
   Controls position of the "Talk with us" element in relation to ".container". 
   This value should be in px.
    */
-  top: 61.7px;
+  top: 65.1px;
   left: min(82.9vw, 87.6%);
   margin: 0;
   width: auto;
@@ -83,6 +83,11 @@ body, #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n) strong, #c
   right: 120%;
   width: max-content;
 }
+@media (max-width: 968px) {
+  .barra-inicial .conteiner .row-fluid .canais-contato ul li.tel-whatsapp {
+    top: 0;
+  }
+}
 .barra-inicial .conteiner .row-fluid .canais-contato ul li i {
   color: inherit;
 }
@@ -96,6 +101,12 @@ body, #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n) strong, #c
   color: inherit;
   display: flex;
   align-items: center;
+}
+@media (max-width: 968px) {
+  .barra-inicial .conteiner .row-fluid .canais-contato {
+    left: min(83.2vw, 87.6%);
+    top: 112.1px;
+  }
 }
 
 /* This mixin represents the following group of elements
@@ -160,13 +171,20 @@ body, #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n) strong, #c
   border-top: 1px solid #0000000f;
   padding-top: 1.3rem;
 }
+#cabecalho .conteiner .row-fluid .conteudo-topo .superior .span8 {
+  margin: 5px 0 5px 10px;
+}
 #cabecalho .conteiner .row-fluid .conteudo-topo .superior .acoes-conta {
   display: flex;
+  width: max-content;
 }
 #cabecalho .conteiner .row-fluid .conteudo-topo .superior .acoes-conta li {
-  width: 37%;
   display: flex;
   align-items: center;
+  flex: auto;
+}
+#cabecalho .conteiner .row-fluid .conteudo-topo .superior .acoes-conta li:first-child {
+  margin-right: 17px;
 }
 #cabecalho .conteiner .row-fluid .conteudo-topo .superior .acoes-conta li:first-child i::before {
   content: "";
@@ -176,11 +194,22 @@ body, #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n) strong, #c
   content: "";
   height: 1.2rem;
 }
+@media (max-width: 968px) {
+  #cabecalho .conteiner .row-fluid .conteudo-topo .superior {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: none;
+    justify-items: end;
+    padding-top: 0.7rem;
+  }
+}
 #cabecalho .conteiner .row-fluid .conteudo-topo .inferior {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   width: 100%;
   align-items: center;
+}
+#cabecalho .conteiner .row-fluid .conteudo-topo .inferior .span8 {
+  margin: 0 10px;
 }
 #cabecalho .conteiner .row-fluid .conteudo-topo .inferior .span4 {
   justify-self: end;
@@ -218,6 +247,11 @@ body, #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n) strong, #c
 }
 #cabecalho .conteiner .row-fluid .conteudo-topo .inferior .busca:focus-within {
   border: 1.5px solid bisque;
+}
+@media (max-width: 968px) {
+  #cabecalho .conteiner .row-fluid .conteudo-topo .inferior {
+    grid-template-columns: 1fr auto;
+  }
 }
 #cabecalho .conteiner .row-fluid .conteudo-topo ul {
   list-style: none;
