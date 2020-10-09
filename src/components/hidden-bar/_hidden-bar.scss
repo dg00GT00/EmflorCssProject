@@ -13,14 +13,46 @@
 	z-index: 10;
 	width: 100%;
 	.conteiner {
-		width: v.$small-theme-width;
-        margin: auto;
-        background-color: white; // ? Temporary value
+		max-width: v.$small-theme-width;
+		margin: auto;
+		background-color: white; // ? Temporary value
+		box-shadow: 0px 2px 19px 3px #0000003d;
+		position: relative;
+		&::before {
+			content: "";
+			height: 100px;
+			width: 90px;
+			display: inline-block;
+			position: absolute;
+			top: 0;
+			left: -9.1%;
+			background-color: white; // ? Temporary value
+		}
+		&::after {
+			content: "";
+			height: 100px;
+			width: 90px;
+			display: inline-block;
+			position: absolute;
+			top: 0;
+			right: -9.1%;
+			background-color: white; // ? Temporary value
+		}
 		.row-fluid {
-            display: flex;
+			display: flex;
             align-items: center;
+            .span3:first-child {
+                flex: none;
+                flex-basis: 115px;
+            }
+            .span3:nth-child(2n){
+                display: none;
+            }
 			> div {
-				flex: auto;
+                flex: auto;
+            }
+            .span6 div:last-of-type {
+                flex: none;
             }
 		}
 		.busca {
@@ -28,14 +60,15 @@
 			padding: 0.6rem;
 			padding-right: 0.8rem;
 			padding-left: 0.8rem;
-			border-radius: 5px;
+            border-radius: 5px;
+            margin: 0 10px;
 			form {
 				display: flex;
-                align-items: center;
-                input {
-                    border: none;
-                    flex: auto;
-                }
+				align-items: center;
+				input {
+					border: none;
+					flex: auto;
+				}
 				.icon-search {
 					@extend %icon-font;
 					border: none;
@@ -50,35 +83,35 @@
 			&:focus-within {
 				border: 1.5px solid bisque; // ? Temporary value
 			}
-        }
-        .span6 {
-            > div {
-                a {
-                    display: flex;
-                    justify-content: flex-end;
-                    text-decoration: none;
-                    color: initial; // ? Temporary value
-                    i {
-                        @extend %icon-font;
-                        width: auto;
-                        height: auto;
-                    }
-                }
-            }
-        }
+		}
+		.span6 {
+			> div {
+				a {
+					display: flex;
+					justify-content: flex-end;
+					text-decoration: none;
+					color: initial; // ? Temporary value
+					i {
+						@extend %icon-font;
+						width: auto;
+						height: auto;
+					}
+				}
+			}
+		}
 	}
 	.titulo {
 		a {
-            display: inline-block;
-            height: 85px;
-            position: relative;
-            font-size: 0;
+			display: inline-block;
+			height: 85px;
+			position: relative;
+			font-size: 0;
 			&::before {
 				content: url(https://cdn.awsli.com.br/400x300/1681/1681887/logo/e3e084ee80.jpg);
-                position: absolute;
-                height: 0;
-                width: 0;
-                transform: scale(.3);
+				position: absolute;
+				height: 0;
+				width: 0;
+				transform: scale(0.3);
 			}
 		}
 	}

@@ -41,16 +41,48 @@ body, #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n) strong, #c
   width: 100%;
 }
 #barraTopo .conteiner {
-  width: 980px;
+  max-width: 980px;
   margin: auto;
+  background-color: white;
+  box-shadow: 0px 2px 19px 3px #0000003d;
+  position: relative;
+}
+#barraTopo .conteiner::before {
+  content: "";
+  height: 100px;
+  width: 90px;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: -9.1%;
+  background-color: white;
+}
+#barraTopo .conteiner::after {
+  content: "";
+  height: 100px;
+  width: 90px;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: -9.1%;
   background-color: white;
 }
 #barraTopo .conteiner .row-fluid {
   display: flex;
   align-items: center;
 }
+#barraTopo .conteiner .row-fluid .span3:first-child {
+  flex: none;
+  flex-basis: 115px;
+}
+#barraTopo .conteiner .row-fluid .span3:nth-child(2n) {
+  display: none;
+}
 #barraTopo .conteiner .row-fluid > div {
   flex: auto;
+}
+#barraTopo .conteiner .row-fluid .span6 div:last-of-type {
+  flex: none;
 }
 #barraTopo .conteiner .busca {
   border: 1px solid #0000000f;
@@ -58,6 +90,7 @@ body, #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n) strong, #c
   padding-right: 0.8rem;
   padding-left: 0.8rem;
   border-radius: 5px;
+  margin: 0 10px;
 }
 #barraTopo .conteiner .busca form {
   display: flex;
