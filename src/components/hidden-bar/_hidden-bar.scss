@@ -1,0 +1,85 @@
+@use '../../base';
+@use '../../abstracts/variables' as v;
+
+#barraTopo {
+	&,
+	& *,
+	&::before,
+	&::after {
+		@extend %default-revert;
+	}
+	position: fixed;
+	top: 0;
+	z-index: 10;
+	width: 100%;
+	.conteiner {
+		width: v.$small-theme-width;
+        margin: auto;
+        background-color: white; // ? Temporary value
+		.row-fluid {
+            display: flex;
+            align-items: center;
+			> div {
+				flex: auto;
+            }
+		}
+		.busca {
+			border: v.$default-border-style;
+			padding: 0.6rem;
+			padding-right: 0.8rem;
+			padding-left: 0.8rem;
+			border-radius: 5px;
+			form {
+				display: flex;
+                align-items: center;
+                input {
+                    border: none;
+                    flex: auto;
+                }
+				.icon-search {
+					@extend %icon-font;
+					border: none;
+					background-color: transparent;
+					margin-left: 0.6rem;
+					cursor: pointer;
+					&::before {
+						content: "\f002";
+					}
+				}
+			}
+			&:focus-within {
+				border: 1.5px solid bisque; // ? Temporary value
+			}
+        }
+        .span6 {
+            > div {
+                a {
+                    display: flex;
+                    justify-content: flex-end;
+                    text-decoration: none;
+                    color: initial; // ? Temporary value
+                    i {
+                        @extend %icon-font;
+                        width: auto;
+                        height: auto;
+                    }
+                }
+            }
+        }
+	}
+	.titulo {
+		a {
+            display: inline-block;
+            height: 85px;
+            position: relative;
+            font-size: 0;
+			&::before {
+				content: url(https://cdn.awsli.com.br/400x300/1681/1681887/logo/e3e084ee80.jpg);
+                position: absolute;
+                height: 0;
+                width: 0;
+                transform: scale(.3);
+			}
+		}
+	}
+}

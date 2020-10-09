@@ -11,7 +11,7 @@
   padding: 10px 30px;
 }
 
-#corpo .conteiner .row-fluid #listagemProdutos.borda-alpha .titulo-categoria strong::before, #corpo .conteiner .row-fluid #listagemProdutos.borda-alpha .titulo-categoria strong::after, #cabecalho .conteiner .row-fluid .conteudo-topo .inferior .span8 a, #cabecalho .conteiner .row-fluid .conteudo-topo .inferior .busca #form-buscar .icon-search, #cabecalho .conteiner .row-fluid .conteudo-topo i, #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n), .barra-inicial .conteiner .row-fluid .canais-contato ul li i {
+#corpo .conteiner .row-fluid #listagemProdutos.borda-alpha .titulo-categoria strong::before, #corpo .conteiner .row-fluid #listagemProdutos.borda-alpha .titulo-categoria strong::after, #cabecalho .conteiner .row-fluid .conteudo-topo .inferior .span8 a, #cabecalho .conteiner .row-fluid .conteudo-topo .inferior .busca #form-buscar .icon-search, #cabecalho .conteiner .row-fluid .conteudo-topo i, #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n), .barra-inicial .conteiner .row-fluid .canais-contato ul li i, #barraTopo .conteiner .busca form .icon-search, #barraTopo .conteiner .span6 > div a i {
   font-family: "FontAwesome-v4";
   font-weight: initial;
   font-style: initial;
@@ -24,15 +24,83 @@ body, #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n) strong, #c
   font-weight: 400;
 }
 
-#rodape .pagamento-selos .row-fluid .span4.selos *, #corpo .conteiner .row-fluid #listagemProdutos ul .listagem-linha .span3 .listagem-item::before, #corpo .conteiner .row-fluid #listagemProdutos ul .listagem-linha .span3 .listagem-item::after, #cabecalho .conteiner .menu.superior, #cabecalho .conteiner .menu.superior *,
-#cabecalho .conteiner .menu.superior *::before,
-#cabecalho .conteiner .menu.superior *::after, #cabecalho .conteiner .menu.superior .nivel-um .nivel-dois.borda-alpha *,
+#rodape .pagamento-selos .row-fluid .span4.selos *, #corpo .conteiner .row-fluid #listagemProdutos ul .listagem-linha .span3 .listagem-item::before, #corpo .conteiner .row-fluid #listagemProdutos ul .listagem-linha .span3 .listagem-item::after, #cabecalho .conteiner .menu.superior,
+#cabecalho .conteiner .menu.superior *, #cabecalho .conteiner .menu.superior::before, #cabecalho .conteiner .menu.superior::after, #cabecalho .conteiner .menu.superior .nivel-um .nivel-dois.borda-alpha *,
 #cabecalho .conteiner .menu.superior .nivel-um .nivel-dois.borda-alpha *::before,
-#cabecalho .conteiner .menu.superior .nivel-um .nivel-dois.borda-alpha *::after, .barra-inicial .conteiner .row-fluid .canais-contato ul, .barra-inicial .conteiner .row-fluid .canais-contato ul *, .barra-inicial .conteiner .row-fluid .canais-contato ul::after {
+#cabecalho .conteiner .menu.superior .nivel-um .nivel-dois.borda-alpha *::after, .barra-inicial .conteiner .row-fluid .canais-contato ul, .barra-inicial .conteiner .row-fluid .canais-contato ul *, .barra-inicial .conteiner .row-fluid .canais-contato ul::after, #barraTopo, #barraTopo *, #barraTopo::before, #barraTopo::after {
   all: revert;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+#barraTopo {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+}
+#barraTopo .conteiner {
+  width: 980px;
+  margin: auto;
+  background-color: white;
+}
+#barraTopo .conteiner .row-fluid {
+  display: flex;
+  align-items: center;
+}
+#barraTopo .conteiner .row-fluid > div {
+  flex: auto;
+}
+#barraTopo .conteiner .busca {
+  border: 1px solid #0000000f;
+  padding: 0.6rem;
+  padding-right: 0.8rem;
+  padding-left: 0.8rem;
+  border-radius: 5px;
+}
+#barraTopo .conteiner .busca form {
+  display: flex;
+  align-items: center;
+}
+#barraTopo .conteiner .busca form input {
+  border: none;
+  flex: auto;
+}
+#barraTopo .conteiner .busca form .icon-search {
+  border: none;
+  background-color: transparent;
+  margin-left: 0.6rem;
+  cursor: pointer;
+}
+#barraTopo .conteiner .busca form .icon-search::before {
+  content: "";
+}
+#barraTopo .conteiner .busca:focus-within {
+  border: 1.5px solid bisque;
+}
+#barraTopo .conteiner .span6 > div a {
+  display: flex;
+  justify-content: flex-end;
+  text-decoration: none;
+  color: initial;
+}
+#barraTopo .conteiner .span6 > div a i {
+  width: auto;
+  height: auto;
+}
+#barraTopo .titulo a {
+  display: inline-block;
+  height: 85px;
+  position: relative;
+  font-size: 0;
+}
+#barraTopo .titulo a::before {
+  content: url(https://cdn.awsli.com.br/400x300/1681/1681887/logo/e3e084ee80.jpg);
+  position: absolute;
+  height: 0;
+  width: 0;
+  transform: scale(0.3);
 }
 
 /* The absolute positioned initial bar */
@@ -317,9 +385,8 @@ body, #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n) strong, #c
 #cabecalho .conteiner .menu.superior {
   z-index: 10;
 }
-#cabecalho .conteiner .menu.superior *,
-#cabecalho .conteiner .menu.superior *::before,
-#cabecalho .conteiner .menu.superior *::after {
+#cabecalho .conteiner .menu.superior,
+#cabecalho .conteiner .menu.superior *, #cabecalho .conteiner .menu.superior::before, #cabecalho .conteiner .menu.superior::after {
   text-decoration: none;
   color: initial;
   list-style: none;
@@ -355,6 +422,9 @@ body, #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n) strong, #c
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+#cabecalho .conteiner .menu.superior .nivel-um li a i {
+  display: none;
 }
 #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n) {
   display: flex;
