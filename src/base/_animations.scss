@@ -1,0 +1,11 @@
+/* Animation to dropdown menus */
+@keyframes slide-in {
+    from {
+        top: 34%;
+        opacity: 0
+    }
+    to {
+        top: 100%;
+        opacity: 1;
+    }
+}

@@ -141,7 +141,7 @@
 			height: 50px;
 			flex: auto;
 			position: relative;
-			transition: font-size 0.2s;
+			transition: font-size .2s;
 			@media (max-width: map.get(v.$max-width-media-queries, "mobile")) {
 				border: v.$default-border-style !important;
 				border-radius: 5px !important;
@@ -188,7 +188,7 @@
 				font-size: 1rem;
 				background-image: radial-gradient(ellipse, #00000008, transparent);
 				a + ul.nivel-dois {
-					display: block;
+                    display: block;
 					@media (max-width: map.get(v.$max-width-media-queries, "mobile")) {
 						display: none;
 					}
@@ -204,10 +204,12 @@
 				text-decoration: none;
 				list-style: none;
 				color: initial;
-			}
+            }
+            animation-name: slide-in;
+            animation-duration: .2s;
+            animation-fill-mode: forwards;
 			display: none;
-			position: absolute;
-			top: 100%;
+            position: absolute;
 			left: 50%;
 			width: 65%;
 			background-color: white; // ? Temporary setting
@@ -247,7 +249,6 @@
  */
 @mixin superior-menu() {
 	.menu.superior {
-		// @extend %default-revert;
 		z-index: 10;
 		&,
 		*,

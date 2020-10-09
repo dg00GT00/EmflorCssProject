@@ -1,5 +1,16 @@
 @charset "UTF-8";
 @import url(http://fonts.googleapis.com/css2?family=Nunito:wght@400);
+/* Animation to dropdown menus */
+@keyframes slide-in {
+  from {
+    top: 34%;
+    opacity: 0;
+  }
+  to {
+    top: 100%;
+    opacity: 1;
+  }
+}
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -499,9 +510,11 @@ body, #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n) strong, #c
   }
 }
 #cabecalho .conteiner .menu.superior .nivel-um .nivel-dois.borda-alpha {
+  animation-name: slide-in;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
   display: none;
   position: absolute;
-  top: 100%;
   left: 50%;
   width: 65%;
   background-color: white;
