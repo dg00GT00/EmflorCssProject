@@ -134,44 +134,45 @@
 		text-align: center;
 		border-top: v.$default-border-style;
 		@media (max-width: map.get(v.$max-width-media-queries, "mobile")) {
-            border: none;
+			border: none;
 			flex-direction: column;
 		}
 		li {
-            height: 50px;
+			height: 50px;
 			flex: auto;
-            position: relative;
-            @media (max-width: map.get(v.$max-width-media-queries, "mobile")) {
-                border: v.$default-border-style !important;
-                border-radius: 5px !important;
-                width: 100%;
-                height: 40px;
-            }
+			position: relative;
+			transition: font-size 0.2s;
+			@media (max-width: map.get(v.$max-width-media-queries, "mobile")) {
+				border: v.$default-border-style !important;
+				border-radius: 5px !important;
+				width: 100%;
+				height: 40px;
+			}
 			a {
 				position: absolute;
 				top: 50%;
 				left: 50%;
-                transform: translate(-50%, -50%);
-                i {
-                    display: none; // * reset
-                }
+				transform: translate(-50%, -50%);
+				i {
+					display: none; // * reset
+				}
 			}
 			&:nth-child(2n) {
 				display: flex;
 				justify-content: center;
-                @extend %icon-font;
-                @media (max-width: map.get(v.$max-width-media-queries, "mobile")){
-                    margin: 5px 0;
-                }
+				@extend %icon-font;
+				@media (max-width: map.get(v.$max-width-media-queries, "mobile")) {
+					margin: 5px 0;
+				}
 				&::before,
 				&::after {
 					content: "\f06c";
 					margin: auto 0;
-                    opacity: 0.3;
-                    font-size: 0.9rem;
-                    @media (max-width: map.get(v.$max-width-media-queries, "mobile")) {
-                        content: none;
-                    }
+					opacity: 0.3;
+					font-size: 0.9rem;
+					@media (max-width: map.get(v.$max-width-media-queries, "mobile")) {
+						content: none;
+					}
 				}
 				&::before {
 					margin-right: auto;
@@ -184,11 +185,13 @@
 				}
 			}
 			&:hover {
+				font-size: 1rem;
+				background-image: radial-gradient(ellipse, #00000008, transparent);
 				a + ul.nivel-dois {
-                    display: block;
-                    @media (max-width: map.get(v.$max-width-media-queries, "mobile")) {
-                        display: none;
-                    }
+					display: block;
+					@media (max-width: map.get(v.$max-width-media-queries, "mobile")) {
+						display: none;
+					}
 				}
 			}
 		}
@@ -211,16 +214,26 @@
 			transform: translateX(-50%);
 			box-shadow: 1px 3px 2px 0px #00000052;
 			border-radius: 3px;
-			padding: 0 20px;
 			border-top: 2px solid;
 			li {
 				height: 50px;
 				display: flex;
 				align-items: center;
-				justify-content: center;
+                justify-content: center;
+                position: relative;
+				&:hover {
+					background-color: #00000008;
+				}
 			}
 			li:nth-child(2n) {
-				border-top: v.$default-border-style;
+				&::before {
+					content: "";
+					width: 80%;
+					height: 1px;
+					background-color: #b9b9b9;
+					position: absolute;
+					top: -1px;
+				}
 			}
 			a {
 				@extend %main-font;
@@ -235,8 +248,8 @@
 @mixin superior-menu() {
 	.menu.superior {
 		// @extend %default-revert;
-        z-index: 10;
-        &,
+		z-index: 10;
+		&,
 		*,
 		&::before,
 		&::after {
