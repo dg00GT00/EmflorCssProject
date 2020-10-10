@@ -13,13 +13,18 @@
 @mixin header-superior-fields() {
 	.superior {
 		display: grid;
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: max-content 1fr;
 		align-items: center;
 		width: 100%;
 		border-top: v.$default-border-style;
-		padding-top: 1.3rem;
+        padding-top: 1.3rem;
+        align-self: start;
 		.span8 {
-			margin: 5px 0 5px 10px;
+			margin: 5px 14px 5px 0;
+			width: max-content;
+			@media (max-width: map.get(v.$max-width-media-queries, "968")) {
+				margin: 5px 0 5px 0;
+			}
 		}
 		.acoes-conta {
 			display: flex;
@@ -29,21 +34,21 @@
 				align-items: center;
 				flex: auto;
 				&:first-child {
-					margin-right: .7em;
+					margin-right: 0.7em;
 					i {
-                        @include m.icon-insertion("my-requests-icon", 35px);
-                        &::before {
-                            content: "";
-                        }
-                    }
+						@include m.icon-insertion("my-requests-icon", 35px);
+						&::before {
+							content: "";
+						}
+					}
 				}
 				&:nth-child(2) {
-                    i {
-                        @include m.icon-insertion("my-account-icon", 35px);
-                        &::before {
-                            content: "";
-                        }
-                    }
+					i {
+						@include m.icon-insertion("my-account-icon", 35px);
+						&::before {
+							content: "";
+						}
+					}
 				}
 			}
 		}
@@ -51,7 +56,8 @@
 			grid-template-rows: repeat(2, 1fr);
 			grid-template-columns: none;
 			justify-items: end;
-			padding-top: 0.7rem;
+            padding-top: 0.7rem;
+            row-gap: 10px;
 		}
 	}
 }
@@ -66,9 +72,11 @@
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		width: 100%;
-		align-items: center;
+        align-items: center;
+        align-self: end;
+        margin: 5px 0;
 		.span8 {
-			margin: 0 10px;
+			margin: 0 22px 0 0;
 			a {
 				margin-left: 15px;
 			}
@@ -80,28 +88,29 @@
 				div {
 					flex: auto;
 				}
-            }
-            button {
+			}
+			button {
 				@include m.icon-insertion("search-icon", 25px);
-                &::before {
-                    content: "";
-                }
-            }
+				&::before {
+					content: "";
+				}
+			}
 		}
 		.span4 {
 			justify-self: end;
 			a {
 				display: flex;
 				align-items: center;
-                i {
-                    @include m.icon-insertion("shopping-cart-icon", 35px);
-                    &::before {
-                        content: "";
-                    }
-                }
+				i {
+					@include m.icon-insertion("shopping-cart-icon", 35px);
+					&::before {
+						content: "";
+					}
+				}
 			}
 		}
-		.busca { // * Search bar
+		.busca {
+			// * Search bar
 			border: v.$default-border-style;
 			padding: 0.6rem;
 			padding-right: 0.8rem;
@@ -112,14 +121,14 @@
 				align-items: center;
 				#auto-complete {
 					border: none;
-                    flex: auto;
-                    @extend %main-font;
+					flex: auto;
+					@extend %main-font;
 				}
 				.icon-search {
 					border: none;
 					background-color: transparent;
-                    margin-left: 0.6rem;
-                    
+					margin-left: 0.6rem;
+
 					cursor: pointer;
 					&::before {
 						content: "";
@@ -147,7 +156,8 @@
 		align-items: center;
 		justify-content: space-evenly;
 		text-align: center;
-		border-top: v.$default-border-style;
+        border-top: v.$default-border-style;
+        padding: 15px 0;
 		@media (max-width: map.get(v.$max-width-media-queries, "mobile")) {
 			border: none;
 			flex-direction: column;
@@ -156,7 +166,7 @@
 			height: 50px;
 			flex: auto;
 			position: relative;
-			transition: font-size .2s;
+			transition: font-size 0.2s;
 			@media (max-width: map.get(v.$max-width-media-queries, "mobile")) {
 				border: v.$default-border-style !important;
 				border-radius: 5px !important;
@@ -196,15 +206,15 @@
 					margin-left: auto;
 				}
 				strong {
-                    @extend %main-font;
-                    font-weight: bold;
-                    // font-size: inherit;
+					@extend %main-font;
+					font-weight: bold;
+					// font-size: inherit;
 				}
 			}
 			&:hover {
 				font-size: 1rem;
 				a + ul.nivel-dois {
-                    display: block;
+					display: block;
 					@media (max-width: map.get(v.$max-width-media-queries, "mobile")) {
 						display: none;
 					}
@@ -220,12 +230,12 @@
 				text-decoration: none;
 				list-style: none;
 				color: inherit;
-            }
-            animation-name: slide-in;
-            animation-duration: .2s;
-            animation-fill-mode: forwards;
+			}
+			animation-name: slide-in;
+			animation-duration: 0.2s;
+			animation-fill-mode: forwards;
 			display: none;
-            position: absolute;
+			position: absolute;
 			left: 50%;
 			width: 65%;
 			background-color: white; // ? Temporary setting
@@ -237,8 +247,8 @@
 				height: 50px;
 				display: flex;
 				align-items: center;
-                justify-content: center;
-                position: relative;
+				justify-content: center;
+				position: relative;
 				&:hover {
 					background-color: #00000008;
 				}
@@ -289,6 +299,7 @@
 			display: grid;
 			grid-template-areas: "logo menus";
 			grid-template-columns: 0.2fr 1fr;
+			margin: 20px 0;
 			*,
 			&::before,
 			&::after {
@@ -299,6 +310,7 @@
 			.span3 {
 				grid-row: logo;
 				justify-self: center;
+				align-self: center;
 				.logo {
 					height: 190px;
 					* {
@@ -312,6 +324,7 @@
 				display: grid;
 				align-items: center;
 				justify-items: center;
+				grid-template-rows: repeat(2, 1fr);
 				@include header-superior-fields();
 				@include header-inferior-fields();
 				ul {

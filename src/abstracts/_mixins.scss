@@ -4,5 +4,6 @@
 	@extend %#{$icon-name};
 	background-size: cover;
 	height: #{$icon-size};
-	width: #{$icon-size};
+    width: #{$icon-size};
+    opacity: 0.9;
 }
