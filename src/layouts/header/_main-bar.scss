@@ -12,7 +12,7 @@
         This value should be in px.
          */
         top: 65.1px;
-        left: min(82.9vw, 87.6%);
+        right: 3.3%;
         margin: 0;
         width: auto;
         ul {
@@ -62,24 +62,24 @@
             }
         }
         @media (max-width : map.get(v.$max-width-media-queries, "968")) {
-            left: min(83.2vw, 87.6%);
+            right: 3.3%;
             top: 112.1px;
         }
-        @media (max-width : map.get(v.$max-width-media-queries, "954")) {
-            left: min(83.9vw, 87.6%);
-        }
-        @media (max-width : map.get(v.$max-width-media-queries, "932")) {
-            left: min(84vw, 87.6%);
-        }
-        @media (max-width : map.get(v.$max-width-media-queries, "862")) {
-            left: min(83.4vw, 87.6%);
-        }
-        @media (max-width : map.get(v.$max-width-media-queries, "862")) {
-            left: min(82.8vw, 87.6%);
-        }
-        @media (max-width : map.get(v.$max-width-media-queries, "792")) {
-            left: min(82vw, 87.6%);
-        }
+        // @media (max-width : map.get(v.$max-width-media-queries, "954")) {
+        //     left: min(83.9vw, 87.6%);
+        // }
+        // @media (max-width : map.get(v.$max-width-media-queries, "932")) {
+        //     left: min(84vw, 87.6%);
+        // }
+        // @media (max-width : map.get(v.$max-width-media-queries, "862")) {
+        //     left: min(83.4vw, 87.6%);
+        // }
+        // @media (max-width : map.get(v.$max-width-media-queries, "862")) {
+        //     left: min(82.8vw, 87.6%);
+        // }
+        // @media (max-width : map.get(v.$max-width-media-queries, "792")) {
+        //     left: min(82vw, 87.6%);
+        // }
     }
 }
 
@@ -87,9 +87,9 @@
 .barra-inicial {
 	line-height: normal;
 	height: 4px;
-	width: v.$small-theme-width;
+	// width: v.$small-theme-width;
     margin: auto;
-    width: v.$small-theme-width - 2 * v.$small-theme-overall-padding;
+    max-width: v.$small-theme-width;
 	.conteiner {
 		position: relative;
 		.row-fluid {
