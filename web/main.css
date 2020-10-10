@@ -494,9 +494,11 @@ body, #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n) strong, #c
 #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n)::after {
   margin-left: auto;
 }
+#cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n) strong {
+  font-weight: bold;
+}
 #cabecalho .conteiner .menu.superior .nivel-um li:hover {
   font-size: 1rem;
-  background-image: radial-gradient(ellipse, #00000008, transparent);
 }
 #cabecalho .conteiner .menu.superior .nivel-um li:hover a + ul.nivel-dois {
   display: block;
