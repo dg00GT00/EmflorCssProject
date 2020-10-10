@@ -91,7 +91,7 @@
 					display: flex;
 					justify-content: flex-end;
 					text-decoration: none;
-					color: initial; // ? Temporary value
+					color: inherit; // ? Temporary value
 					i {
 						@extend %icon-font;
 						width: auto;

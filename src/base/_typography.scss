@@ -3,6 +3,7 @@
 
 $main-font: 'Sen', sans-serif;
 $main-font-size: .92rem;
+$main-font-color: rgb(102, 102, 102);
 $pseudo-icon-font-size: 1.2rem;
 
 %icon-font {
@@ -16,5 +17,5 @@ $pseudo-icon-font-size: 1.2rem;
     font-family: $main-font;
     font-size: $main-font-size;
     font-weight: 400;
-    color: rgb(65, 65, 65)
+    color: $main-font-color;
 }

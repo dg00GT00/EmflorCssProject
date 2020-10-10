@@ -1,4 +1,5 @@
 @use '../../base';
+@use '../../base/typography' as t;
 @use 'sass:map';
 @use '../../abstracts/variables' as v;
 @use '../../abstracts/functions' as f;
@@ -19,7 +20,7 @@
 			@extend %default-revert;
 			position: relative;
 			list-style: none; // reset
-			color: initial; // * Controls the text color of ".canais-contato"
+			color: t.$main-font-color; // * Controls the text color of ".canais-contato"
 			*,
 			&::after {
 				@extend %default-revert;
