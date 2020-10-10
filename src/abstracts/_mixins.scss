@@ -1,0 +1,8 @@
+@use '../components/icon-set';
+
+@mixin icon-insertion($icon-name, $icon-size: 30px) {
+	@extend %#{$icon-name};
+	background-size: cover;
+	height: #{$icon-size};
+	width: #{$icon-size};
+}

@@ -1,7 +1,8 @@
-@use '../../base';
 @use 'sass:map';
+@use '../../base';
 @use '../../abstracts/variables' as v;
 @use '../../base/typography' as t;
+@use '../../abstracts/mixins' as m;
 
 /* This mixin represents the following group of elements
 *    - Login text
@@ -29,16 +30,20 @@
 				flex: auto;
 				&:first-child {
 					margin-right: .7em;
-					i::before {
-						content: "\f03a";
-						height: t.$pseudo-icon-font-size;
-					}
+					i {
+                        @include m.icon-insertion("my-requests-icon", 35px);
+                        &::before {
+                            content: "";
+                        }
+                    }
 				}
 				&:nth-child(2) {
-					i::before {
-						content: "\f007";
-						height: t.$pseudo-icon-font-size;
-					}
+                    i {
+                        @include m.icon-insertion("my-account-icon", 35px);
+                        &::before {
+                            content: "";
+                        }
+                    }
 				}
 			}
 		}
@@ -54,7 +59,7 @@
 /* This mixin represents the following group of elements
 *    - Search bar
 *    - Phone and Whatsapp contacts
-*    - Purchase basket
+*    - Shopping cart
  */
 @mixin header-inferior-fields() {
 	.inferior {
@@ -65,7 +70,6 @@
 		.span8 {
 			margin: 0 10px;
 			a {
-				@extend %icon-font;
 				margin-left: 15px;
 			}
 			@media (max-width: map.get(v.$max-width-media-queries, "mobile")) {
@@ -76,19 +80,28 @@
 				div {
 					flex: auto;
 				}
-			}
+            }
+            button {
+				@include m.icon-insertion("search-icon", 25px);
+                &::before {
+                    content: "";
+                }
+            }
 		}
 		.span4 {
 			justify-self: end;
 			a {
 				display: flex;
 				align-items: center;
-				i::before {
-					content: "\f07a";
-				}
+                i {
+                    @include m.icon-insertion("shopping-cart-icon", 35px);
+                    &::before {
+                        content: "";
+                    }
+                }
 			}
 		}
-		.busca {
+		.busca { // * Search bar
 			border: v.$default-border-style;
 			padding: 0.6rem;
 			padding-right: 0.8rem;
@@ -103,13 +116,13 @@
                     @extend %main-font;
 				}
 				.icon-search {
-					@extend %icon-font;
 					border: none;
 					background-color: transparent;
-					margin-left: 0.6rem;
+                    margin-left: 0.6rem;
+                    
 					cursor: pointer;
 					&::before {
-						content: "\f002";
+						content: "";
 					}
 				}
 			}

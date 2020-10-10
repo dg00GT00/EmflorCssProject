@@ -30,7 +30,7 @@
   padding: 10px 20px;
 }
 
-#cabecalho .conteiner .row-fluid .conteudo-topo .inferior .span8 a, #cabecalho .conteiner .row-fluid .conteudo-topo .inferior .busca #form-buscar .icon-search, #cabecalho .conteiner .row-fluid .conteudo-topo i, #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n), .barra-inicial .conteiner .row-fluid .canais-contato ul li i, #corpo .conteiner .row-fluid #listagemProdutos.borda-alpha .titulo-categoria strong::before, #corpo .conteiner .row-fluid #listagemProdutos.borda-alpha .titulo-categoria strong::after, #barraTopo .conteiner .busca form .icon-search, #barraTopo .conteiner .span6 > div a i {
+#cabecalho .conteiner .row-fluid .conteudo-topo i, #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n), #corpo .conteiner .row-fluid #listagemProdutos.borda-alpha .titulo-categoria strong::before, #corpo .conteiner .row-fluid #listagemProdutos.borda-alpha .titulo-categoria strong::after, #barraTopo .conteiner .busca form .icon-search, #barraTopo .conteiner .span6 > div a i {
   font-family: "FontAwesome-v4";
   font-weight: initial;
   font-style: initial;
@@ -47,7 +47,7 @@
 #rodape .pagamento-selos .row-fluid .span4.selos *, #corpo .conteiner .row-fluid #listagemProdutos ul .listagem-linha .span3 .listagem-item::before, #corpo .conteiner .row-fluid #listagemProdutos ul .listagem-linha .span3 .listagem-item::after, #cabecalho .conteiner .menu.superior,
 #cabecalho .conteiner .menu.superior *, #cabecalho .conteiner .menu.superior::before, #cabecalho .conteiner .menu.superior::after, #cabecalho .conteiner .menu.superior .nivel-um .nivel-dois.borda-alpha *,
 #cabecalho .conteiner .menu.superior .nivel-um .nivel-dois.borda-alpha *::before,
-#cabecalho .conteiner .menu.superior .nivel-um .nivel-dois.borda-alpha *::after, .barra-inicial .conteiner .row-fluid .canais-contato ul, .barra-inicial .conteiner .row-fluid .canais-contato ul *, .barra-inicial .conteiner .row-fluid .canais-contato ul::after, #barraTopo, #barraTopo *, #barraTopo::before, #barraTopo::after {
+#cabecalho .conteiner .menu.superior .nivel-um .nivel-dois.borda-alpha *::after, .barra-inicial .conteiner .row-fluid .canais-contato ul, .barra-inicial .conteiner .row-fluid .canais-contato ul *, .barra-inicial .conteiner .row-fluid .canais-contato ul::after, .barra-inicial .conteiner .row-fluid .canais-contato ul::before, #barraTopo, #barraTopo *, #barraTopo::before, #barraTopo::after {
   all: revert;
   box-sizing: border-box;
   margin: 0;
@@ -156,6 +156,30 @@
   transform: scale(0.3);
 }
 
+.barra-inicial .conteiner .row-fluid .canais-contato ul li.tel-whatsapp i {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' aria-labelledby='title' aria-describedby='desc' role='img' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Ctitle%3EChats%3C/title%3E%3Cdesc%3EA flat styled icon from Orion Icon Library.%3C/desc%3E%3Cpath data-name='layer2' d='M34 2A28 28 0 0 0 9.307 43.206L3.2 60.8l17.527-6.148A28 28 0 1 0 34 2z' fill='%2344e0b3'%3E%3C/path%3E%3Cpath data-name='layer1' d='M48.453 36.52c.656.449 1.723 1.058 1.521 2.462A7.167 7.167 0 0 1 43.219 44c-4.492 0-10-3.542-14.842-8.378S20 25.273 20 20.781a7.167 7.167 0 0 1 5.018-6.756c1.406-.2 2.014.864 2.463 1.521s3.006 4.6 3.4 5.2a2.42 2.42 0 0 1-.641 3.267c-1.451 1.175-2.869 1.626 2.623 7.119s5.945 4.075 7.121 2.623a2.415 2.415 0 0 1 3.264-.639c.609.397 4.552 2.954 5.205 3.404z' fill='%23fff'%3E%3C/path%3E%3Cpath data-name='opacity' d='M31.156 21.347a2.485 2.485 0 0 1 .1.819 2.476 2.476 0 0 0-.1-.819zm-4.281-6.624a5.131 5.131 0 0 1 .429.561 5.131 5.131 0 0 0-.429-.561zm2.192 10.434a1.529 1.529 0 0 1 .2-.309 1.529 1.529 0 0 0-.2.309zm-4.695-10.926c.043-.018.09-.041.131-.057l-.131.057zm19.856 19.521l.763.5zm-.328-.213l-.648-.423a2.005 2.005 0 0 0-.265-.146 2.005 2.005 0 0 1 .265.146zm-3.912.215a3.206 3.206 0 0 1 .453-.46 3.206 3.206 0 0 0-.453.46 7.623 7.623 0 0 1-.836.975 7.623 7.623 0 0 0 .836-.975zm-14.97-19.729a2.263 2.263 0 0 1 .491-.02 2.263 2.263 0 0 0-.491.02 2.332 2.332 0 0 0-.422.118 2.332 2.332 0 0 1 .422-.118zm-2.501 1.385l.018-.017zm27.458 23.571v.008-.028.02z' fill='%23000064' opacity='.15'%3E%3C/path%3E%3Cpath data-name='opacity' d='M48.167 41.936A6.88 6.88 0 0 1 43.219 44c-4.492 0-10-3.542-14.842-8.378S20 25.273 20 20.781a6.893 6.893 0 0 1 2.109-5l-4.315 4.321a6.5 6.5 0 0 0-.185.186l-.126.126h.008a6.845 6.845 0 0 0-1.9 4.768c0 4.492 3.541 10 8.377 14.841s10.35 8.378 14.842 8.378a6.839 6.839 0 0 0 4.72-1.851v.006l.124-.124a8.09 8.09 0 0 0 .262-.262l4.25-4.24zm1.755-2.723l-.009.027zm-26.178-24.67l.046-.028zm.346-.183l.075-.039-.075.039zm-.719.41l.015-.011zm-.421.292l.014-.011z' fill='%23000064' opacity='.15'%3E%3C/path%3E%3C/svg%3E");
+}
+
+#cabecalho .conteiner .row-fluid .conteudo-topo .inferior .span4 a i {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' aria-labelledby='title' aria-describedby='desc' role='img' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Ctitle%3EStore Sale%3C/title%3E%3Cdesc%3EA flat styled icon from Orion Icon Library.%3C/desc%3E%3Cpath data-name='layer4' d='M15 23.208a1 1 0 0 1-.97-.759L10.209 7H5a1 1 0 0 1 0-2h5.991a1 1 0 0 1 .972.762L15.97 21.97a1 1 0 0 1-.729 1.21 1.061 1.061 0 0 1-.241.028z' fill='%238fa9d8'%3E%3C/path%3E%3Ccircle data-name='layer3' cx='21.992' cy='53.999' r='4' fill='%23808ed2'%3E%3C/circle%3E%3Ccircle data-name='layer3' cx='47.992' cy='53.999' r='4' fill='%23808ed2'%3E%3C/circle%3E%3Cpath data-name='layer2' fill='%23c3d6f9' d='M60.001 21.999L13.999 22l5.993 24.001h32l8.009-24.002z'%3E%3C/path%3E%3Cpath data-name='layer1' d='M46 12a1 1 0 0 1-1-1V7a1 1 0 0 1 2 0v4a1 1 0 0 1-1 1zm0 26a1 1 0 0 1-1-1v-4a1 1 0 0 1 2 0v4a1 1 0 0 1-1 1z' fill='%2350aa8b'%3E%3C/path%3E%3Cpath data-name='layer1' d='M46 34c-5.261 0-8.089-3.556-8.491-6.86a1 1 0 0 1 1.991-.24c.307 2.538 2.439 5.1 6.5 5.1 4.252 0 7-1.57 7-4 0-2.3-1.9-3.858-6.563-5.373C40.824 20.8 38 19.889 38 16s4.122-6 8-6c4.288 0 6.817 1.818 7.959 5.719a1 1 0 1 1-1.919.562C51.154 13.24 49.4 12 46 12c-2.949 0-6 1.5-6 4 0 2.346 1.347 2.872 7.055 4.725C50.988 22 55 23.865 55 28c0 3.645-3.529 6-9 6z' fill='%2350aa8b'%3E%3C/path%3E%3C/svg%3E");
+}
+
+.barra-inicial .conteiner .row-fluid .canais-contato ul li:first-child i {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' aria-labelledby='title' aria-describedby='desc' role='img' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Ctitle%3ECustomer Support%3C/title%3E%3Cdesc%3EA flat styled icon from Orion Icon Library.%3C/desc%3E%3Cpath data-name='layer6' d='M26.021 4.4C26.1 6.477 26.035 16.322 18 19v7c0 6.117 2.378 11.32 6.006 14.515l-.006.006V44c0 1.69.434 4.094-6.068 6.005L28 62h8l9.563-11.961C39.282 48.123 40 45.7 40 44v-5c2 0 6-3 6-7V18C27.995 18 26.2 6.659 26.021 4.4z' fill='%23ffe1e1'%3E%3C/path%3E%3Cpath data-name='layer5' d='M51 20h-5v6s0 3.144.349 6.991V33H51a3.3 3.3 0 0 0 3-3v-7a3.3 3.3 0 0 0-3-3zm-33 0h-6a3.3 3.3 0 0 0-3 3v7a3.3 3.3 0 0 0 3 3h5.217l.022-.026C17.8 29.134 18 26 18 26z' fill='%238ca0c8'%3E%3C/path%3E%3Cpath data-name='layer3' d='M32 2c-6.627 0-14 3.6-14 14v3c8.035-2.678 8.1-12.523 8.021-14.6C26 4.145 26 4 26 4s.011.145.021.4C26.2 6.659 27.995 18 46 18v-2C46 5.6 38.627 2 32 2z' fill='%23e27250'%3E%3C/path%3E%3Cpath data-name='layer4' d='M61 62a14.28 14.28 0 0 0-11.422-11 37.937 37.937 0 0 1-4.016-.961L36 62zM13.609 51A14.557 14.557 0 0 0 2 62h26L17.932 50.005a42.214 42.214 0 0 1-4.323.995z' fill='%2378d1f4'%3E%3C/path%3E%3Cpath data-name='layer3' d='M24 44v-3.479l.006-.006C20.378 37.32 18 32.117 18 26c0 0-1 16-5 20a10.762 10.762 0 0 0 4.928 4h.012c6.493-1.908 6.06-4.311 6.06-6zm26 2c-4-4-4-20-4-20v6c0 4-4 7-6 7v5c0 1.68-.688 4.064 5.354 5.97A10.673 10.673 0 0 0 50 46z' fill='%23e27250'%3E%3C/path%3E%3Cpath data-name='layer2' d='M40 40a1 1 0 0 1 0-2c1.45 0 5-2.6 5-6a1 1 0 0 1 2 0c0 4.7-4.541 8-7 8z' fill='%23556685'%3E%3C/path%3E%3Cpath data-name='opacity' d='M39.089 41.09l-7.012-2.326V2H32c-6.627 0-14 3.6-14 14v4h-6a3.3 3.3 0 0 0-3 3v7a3.3 3.3 0 0 0 3 3h5.216l.022-.026C16.527 37.812 15.23 43.77 13 46a10.762 10.762 0 0 0 4.928 4h.012c5.682-1.672 6.061-3.721 6.066-5.338-.006 1.619-.385 3.668-6.074 5.341a42.229 42.229 0 0 1-4.323.997A14.557 14.557 0 0 0 2 62h16.179zM17.6 30.192c.141-1.211.239-2.246.3-2.983-.056.737-.155 1.77-.3 2.983zM26.021 4.4C26 4.145 26 4 26 4s.011.145.021.4z' fill='%23000064' opacity='.15'%3E%3C/path%3E%3Cpath data-name='layer1' d='M40 38.937A2.933 2.933 0 0 0 37.07 36h-2.138A2.934 2.934 0 0 0 32 38.937 3.045 3.045 0 0 0 34.932 42h2.138A3.045 3.045 0 0 0 40 38.937z' fill='%238fa9d8'%3E%3C/path%3E%3C/svg%3E");
+}
+
+#cabecalho .conteiner .row-fluid .conteudo-topo .superior .acoes-conta li:nth-child(2) i {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' aria-labelledby='title' aria-describedby='desc' role='img' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Ctitle%3EUser Group%3C/title%3E%3Cdesc%3EA flat styled icon from Orion Icon Library.%3C/desc%3E%3Cpath data-name='layer3' d='M25.924 51.2c8.049-1.087 8-4 8-5.6v-.942a14.59 14.59 0 0 1-4.176-7.038h-.043c-2.437 0-3-5.06-3-5.818s.215-3.46 1.295-3.785C24 14 36 8.028 46.406 15.216c4.352 0 5.773 6.4 4.176 12.8 1.082 0 1.293 3.027 1.293 3.785s-.566 5.817-3 5.817h-.014A15.713 15.713 0 0 1 44 44.635v.965c0 1.6.643 4.573 8.709 5.6C62 52.385 62 60 62 60H18s-.07-7.719 7.924-8.8z' fill='%23808ed2'%3E%3C/path%3E%3Cpath data-name='layer2' d='M28.18 28.02c-1.08.325-1.386 3.027-1.386 3.785s.521 5.817 2.959 5.817h.057A13.975 13.975 0 0 0 34 44.655v.945c0 1.6.01 4.515-8.039 5.6a10.474 10.474 0 0 0-2.879.812l-.039.008H2s0-6.338 8.336-8.011C18.3 42.409 18 39.2 18 37.6V36a56.576 56.576 0 0 1-12.8-1.6c3.268-3.266 6.4-4.717 6.4-18.45 0-16.276 16.182-11.2 16.182-11.2C33.65 4.746 36 8.929 37 12.182c-7 .418-11.56 6.24-8.82 15.838z' fill='%2340ae88'%3E%3C/path%3E%3Cpath data-name='layer1' d='M28.18 28.02c-1.08.325-1.386 3.027-1.386 3.785s.521 5.817 2.959 5.817h.057A13.975 13.975 0 0 0 34 44.655v.945c0 1.6.01 4.515-8.039 5.6a10.474 10.474 0 0 0-2.879.812l-.039.008H2s0-6.338 8.336-8.011C18.3 42.409 18 39.2 18 37.6V36a56.576 56.576 0 0 1-12.8-1.6c3.268-3.266 6.4-4.717 6.4-18.45 0-16.276 16.182-11.2 16.182-11.2C33.65 4.746 36 8.929 37 12.182c-7 .418-11.56 6.24-8.82 15.838z' fill='%2340ae88'%3E%3C/path%3E%3Cpath data-name='opacity' d='M18 36v1.6c0 1.6.3 4.813-7.664 6.413C2 45.681 2 52.02 2 52.02h21.043l.039-.008a10.474 10.474 0 0 1 2.879-.812C34.01 50.113 34 47.2 34 45.6v-.943a13.975 13.975 0 0 1-4.19-7.038h-.057c-2.438 0-2.959-5.06-2.959-5.817s.306-3.46 1.386-3.785c-1.711-6-.573-10.518 2.227-13.169l-.072-.071L9.8 35.315A55.289 55.289 0 0 0 18 36z' fill='%23000064' opacity='.15'%3E%3C/path%3E%3C/svg%3E");
+}
+
+#cabecalho .conteiner .row-fluid .conteudo-topo .superior .acoes-conta li:first-child i {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' aria-labelledby='title' aria-describedby='desc' role='img' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Ctitle%3EMedia Content%3C/title%3E%3Cdesc%3EA flat styled icon from Orion Icon Library.%3C/desc%3E%3Cpath data-name='layer3' fill='%23808ed2' d='M4 36h20v20H4z'%3E%3C/path%3E%3Cpath data-name='layer2' fill='%2350aa8b' d='M4 8h20v20H4z'%3E%3C/path%3E%3Cpath data-name='layer1' d='M62 15H34a1 1 0 0 1 0-2h28a1 1 0 0 1 0 2zm0 12H34a1 1 0 0 1 0-2h28a1 1 0 0 1 0 2zm0 12H34a1 1 0 0 1 0-2h28a1 1 0 0 1 0 2zm0 12H34a1 1 0 0 1 0-2h28a1 1 0 0 1 0 2z' fill='%237c89ad'%3E%3C/path%3E%3C/svg%3E");
+}
+
+#cabecalho .conteiner .row-fluid .conteudo-topo .inferior .span8 button {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' aria-labelledby='title' aria-describedby='desc' role='img' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Ctitle%3ESearch Find%3C/title%3E%3Cdesc%3EA flat styled icon from Orion Icon Library.%3C/desc%3E%3Cpath data-name='layer3' d='M41.732 36.489L57.34 52.1a3 3 0 0 1-4.24 4.24L37.641 40.883' fill='%23a7867a'%3E%3C/path%3E%3Ccircle data-name='layer2' cx='25.816' cy='25.816' r='19.816' fill='%23deb09e'%3E%3C/circle%3E%3Ccircle data-name='layer1' cx='25.815' cy='25.816' r='16.213' fill='%23a5e4f4'%3E%3C/circle%3E%3Cpath data-name='opacity' d='M42.028 25.816A16.16 16.16 0 0 0 37.2 14.283L14.283 37.2a16.154 16.154 0 0 0 11.532 4.825c.109 0 .214-.014.322-.017l15.875-15.87c.002-.108.016-.214.016-.322z' fill='%23fff' opacity='.5'%3E%3C/path%3E%3C/svg%3E");
+}
+
 /* The absolute positioned initial bar */
 .barra-inicial {
   line-height: normal;
@@ -186,8 +210,14 @@
   list-style: none;
   color: #666666;
 }
-.barra-inicial .conteiner .row-fluid .canais-contato ul i::before {
+.barra-inicial .conteiner .row-fluid .canais-contato ul li:first-child i {
+  background-size: cover;
+  height: 30px;
+  width: 30px;
   margin-right: 0.5rem;
+}
+.barra-inicial .conteiner .row-fluid .canais-contato ul li:first-child i::before {
+  content: "";
 }
 .barra-inicial .conteiner .row-fluid .canais-contato ul li {
   margin: 0;
@@ -204,13 +234,19 @@
   right: 120%;
   width: max-content;
 }
+.barra-inicial .conteiner .row-fluid .canais-contato ul li.tel-whatsapp i {
+  background-size: cover;
+  height: 25px;
+  width: 25px;
+  margin-right: 0.5rem;
+}
+.barra-inicial .conteiner .row-fluid .canais-contato ul li.tel-whatsapp i::before {
+  content: "";
+}
 @media (max-width: 968px) {
   .barra-inicial .conteiner .row-fluid .canais-contato ul li.tel-whatsapp {
     top: 0;
   }
-}
-.barra-inicial .conteiner .row-fluid .canais-contato ul li i {
-  color: inherit;
 }
 .barra-inicial .conteiner .row-fluid .canais-contato ul li span {
   color: inherit;
@@ -254,7 +290,7 @@
 /* This mixin represents the following group of elements
 *    - Search bar
 *    - Phone and Whatsapp contacts
-*    - Purchase basket
+*    - Shopping cart
  */
 /* This mixin represents the following group of elements
 *   - Categories menu level one
@@ -320,13 +356,21 @@
 #cabecalho .conteiner .row-fluid .conteudo-topo .superior .acoes-conta li:first-child {
   margin-right: 0.7em;
 }
+#cabecalho .conteiner .row-fluid .conteudo-topo .superior .acoes-conta li:first-child i {
+  background-size: cover;
+  height: 35px;
+  width: 35px;
+}
 #cabecalho .conteiner .row-fluid .conteudo-topo .superior .acoes-conta li:first-child i::before {
-  content: "";
-  height: 1.2rem;
+  content: "";
+}
+#cabecalho .conteiner .row-fluid .conteudo-topo .superior .acoes-conta li:nth-child(2) i {
+  background-size: cover;
+  height: 35px;
+  width: 35px;
 }
 #cabecalho .conteiner .row-fluid .conteudo-topo .superior .acoes-conta li:nth-child(2) i::before {
-  content: "";
-  height: 1.2rem;
+  content: "";
 }
 @media (max-width: 968px) {
   #cabecalho .conteiner .row-fluid .conteudo-topo .superior {
@@ -359,6 +403,14 @@
     flex: auto;
   }
 }
+#cabecalho .conteiner .row-fluid .conteudo-topo .inferior .span8 button {
+  background-size: cover;
+  height: 25px;
+  width: 25px;
+}
+#cabecalho .conteiner .row-fluid .conteudo-topo .inferior .span8 button::before {
+  content: "";
+}
 #cabecalho .conteiner .row-fluid .conteudo-topo .inferior .span4 {
   justify-self: end;
 }
@@ -366,8 +418,13 @@
   display: flex;
   align-items: center;
 }
+#cabecalho .conteiner .row-fluid .conteudo-topo .inferior .span4 a i {
+  background-size: cover;
+  height: 35px;
+  width: 35px;
+}
 #cabecalho .conteiner .row-fluid .conteudo-topo .inferior .span4 a i::before {
-  content: "";
+  content: "";
 }
 #cabecalho .conteiner .row-fluid .conteudo-topo .inferior .busca {
   border: 1px solid #0000000f;
@@ -391,7 +448,7 @@
   cursor: pointer;
 }
 #cabecalho .conteiner .row-fluid .conteudo-topo .inferior .busca #form-buscar .icon-search::before {
-  content: "";
+  content: "";
 }
 #cabecalho .conteiner .row-fluid .conteudo-topo .inferior .busca:focus-within {
   border: 1.5px solid bisque;

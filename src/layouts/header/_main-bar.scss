@@ -1,8 +1,10 @@
+@use 'sass:map';
 @use '../../base';
 @use '../../base/typography' as t;
-@use 'sass:map';
 @use '../../abstracts/variables' as v;
 @use '../../abstracts/functions' as f;
+@use '../../abstracts/mixins' as m;
+@use '../../components/icon-set';
 
 @mixin talk_with_us_whatsapp_contacts() {
 	.canais-contato {
@@ -19,15 +21,22 @@
 		ul {
 			@extend %default-revert;
 			position: relative;
-			list-style: none; // reset
+			list-style: none; // * reset
 			color: t.$main-font-color; // * Controls the text color of ".canais-contato"
 			*,
-			&::after {
-				@extend %default-revert;
-			}
-			i::before {
-				margin-right: 0.5rem;
-			}
+			&::after,
+			&::before {
+                @extend %default-revert;
+            }
+            li:first-child {
+                i {
+                    @include m.icon-insertion("talk-with-us-icon");
+                    margin-right: .5rem;
+                    &::before {
+                        content: "";
+                    }
+                }
+            }
 			li {
 				margin: 0;
 				padding: 0;
@@ -41,13 +50,16 @@
 					top: 85px;
 					right: 120%;
 					width: max-content;
+					i {
+                        @include m.icon-insertion("whatsapp-icon", 25px);
+                        margin-right: .5rem;
+                        &::before {
+                            content: "";
+                        }
+					}
 					@media (max-width: map.get(v.$max-width-media-queries, "968")) {
 						top: 0;
 					}
-				}
-				i {
-					@extend %icon-font;
-					color: inherit;
 				}
 				span {
 					color: inherit;
@@ -91,9 +103,9 @@
 	&::before,
 	&::after {
 		content: "";
-        background-color: white; // ? Temporary value;
-        display: inline-block;
-        position: absolute;
+		background-color: white; // ? Temporary value;
+		display: inline-block;
+		position: absolute;
 		height: 100%;
 		width: v.$small-theme-overall-padding;
 		top: 0;
