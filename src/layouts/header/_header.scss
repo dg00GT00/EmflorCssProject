@@ -1,6 +1,7 @@
 @use '../../base';
 @use 'sass:map';
 @use '../../abstracts/variables' as v;
+@use '../../base/typography' as t;
 
 /* This mixin represents the following group of elements
 *    - Login text
@@ -30,13 +31,13 @@
 					margin-right: 17px;
 					i::before {
 						content: "\f03a";
-						height: v.$pseudo-icon-font-size;
+						height: t.$pseudo-icon-font-size;
 					}
 				}
 				&:nth-child(2) {
 					i::before {
 						content: "\f007";
-						height: v.$pseudo-icon-font-size;
+						height: t.$pseudo-icon-font-size;
 					}
 				}
 			}
@@ -98,7 +99,8 @@
 				align-items: center;
 				#auto-complete {
 					border: none;
-					flex: auto;
+                    flex: auto;
+                    @extend %main-font;
 				}
 				.icon-search {
 					@extend %icon-font;

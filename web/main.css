@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url(http://fonts.googleapis.com/css2?family=Nunito:wght@400);
+@import url(https://fonts.googleapis.com/css2?family=Krub:wght@400;600&family=Maven+Pro:wght@400;600&family=Red+Hat+Text:ital,wght@0,400;1,500&family=Sen:wght@400;700&display=swap);
 /* Animation to dropdown menus */
 @keyframes slide-in {
   from {
@@ -29,17 +30,18 @@
   padding: 10px 20px;
 }
 
-#corpo .conteiner .row-fluid #listagemProdutos.borda-alpha .titulo-categoria strong::before, #corpo .conteiner .row-fluid #listagemProdutos.borda-alpha .titulo-categoria strong::after, #cabecalho .conteiner .row-fluid .conteudo-topo .inferior .span8 a, #cabecalho .conteiner .row-fluid .conteudo-topo .inferior .busca #form-buscar .icon-search, #cabecalho .conteiner .row-fluid .conteudo-topo i, #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n), .barra-inicial .conteiner .row-fluid .canais-contato ul li i, #barraTopo .conteiner .busca form .icon-search, #barraTopo .conteiner .span6 > div a i {
+#cabecalho .conteiner .row-fluid .conteudo-topo .inferior .span8 a, #cabecalho .conteiner .row-fluid .conteudo-topo .inferior .busca #form-buscar .icon-search, #cabecalho .conteiner .row-fluid .conteudo-topo i, #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n), #corpo .conteiner .row-fluid #listagemProdutos.borda-alpha .titulo-categoria strong::before, #corpo .conteiner .row-fluid #listagemProdutos.borda-alpha .titulo-categoria strong::after, .barra-inicial .conteiner .row-fluid .canais-contato ul li i, #barraTopo .conteiner .busca form .icon-search, #barraTopo .conteiner .span6 > div a i {
   font-family: "FontAwesome-v4";
   font-weight: initial;
   font-style: initial;
   font-size: 1.2rem;
 }
 
-body, #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n) strong, #cabecalho .conteiner .menu.superior .nivel-um .nivel-dois.borda-alpha a {
-  font-family: "Nunito";
-  font-size: 0.9rem;
+#cabecalho .conteiner .row-fluid .conteudo-topo .inferior .busca #form-buscar #auto-complete, #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n) strong, #cabecalho .conteiner .menu.superior .nivel-um .nivel-dois.borda-alpha a, body, #barraTopo .conteiner .busca form input {
+  font-family: "Sen", sans-serif;
+  font-size: 0.92rem;
   font-weight: 400;
+  color: #414141;
 }
 
 #rodape .pagamento-selos .row-fluid .span4.selos *, #corpo .conteiner .row-fluid #listagemProdutos ul .listagem-linha .span3 .listagem-item::before, #corpo .conteiner .row-fluid #listagemProdutos ul .listagem-linha .span3 .listagem-item::after, #cabecalho .conteiner .menu.superior,

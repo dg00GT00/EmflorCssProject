@@ -67,7 +67,8 @@
 				align-items: center;
 				input {
 					border: none;
-					flex: auto;
+                    flex: auto;
+                    @extend %main-font;
 				}
 				.icon-search {
 					@extend %icon-font;
