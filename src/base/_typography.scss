@@ -1,15 +1,20 @@
-@use '../abstracts/variables' as v;
 @import url(http://fonts.googleapis.com/css2?family=Nunito:wght@400);
+@import url(https://fonts.googleapis.com/css2?family=Krub:wght@400;600&family=Maven+Pro:wght@400;600&family=Red+Hat+Text:ital,wght@0,400;1,500&family=Sen:wght@400;700&display=swap);
+
+$main-font: 'Sen', sans-serif;
+$main-font-size: .92rem;
+$pseudo-icon-font-size: 1.2rem;
 
 %icon-font {
     font-family: "FontAwesome-v4";
     font-weight: initial;
     font-style: initial;
-    font-size: v.$pseudo-icon-font-size;
+    font-size: $pseudo-icon-font-size;
 }
 
 %main-font {
-    font-family: v.$main-font;
-    font-size: v.$main-font-size;
+    font-family: $main-font;
+    font-size: $main-font-size;
     font-weight: 400;
+    color: rgb(65, 65, 65)
 }
