@@ -37,8 +37,8 @@ body {
 			// * products list
 			padding-top: 40px;
 			.span3 {
+				transition: all 0.3s;
 				.listagem-item {
-					// & *,
 					&::before,
 					&::after {
 						@extend %default-revert;
@@ -61,17 +61,17 @@ body {
 							min-height: 55px;
 							overflow: hidden;
 							margin: 10px 0;
-                        }
-                        div:last-child {
-                            @media (max-width: map.get(v.$max-width-media-queries, "mobile")) {
-                                display: flex;
-                                justify-content: space-evenly;
-                            }
-                        }
+						}
+						div:last-child {
+							@media (max-width: map.get(v.$max-width-media-queries, "mobile")) {
+								display: flex;
+								justify-content: space-evenly;
+							}
+						}
 						> div {
 							border-top: v.$default-border-style;
 							padding: 20px 0;
-                            margin: 10px 0;
+							margin: 10px 0;
 							strong {
 								font-size: 1.3rem;
 								@media (max-width: map.get(v.$max-width-media-queries, "mobile")) {
@@ -92,30 +92,35 @@ body {
 					&:hover {
 						outline: none;
 						.acoes-produto {
-							bottom: 32.6%;
+							bottom: 37.6%;
 						}
 					}
 					.acoes-produto {
 						border: none;
 						padding: 0;
-                        background-color: transparent;
-                        position: relative;
-                        a {
-                            &::before {
-                                content: "Comprar";
-                                position: absolute;
-                                width: 100%;
-                                top: 0;
-                                left: 0;
-                                background-color: red;
-                            }
-                        }
+						background-color: transparent;
+						position: relative;
+						a {
+                            padding: 6px 0;
+							&::before {
+								content: "Comprar";
+								position: absolute;
+								width: 50%;
+								top: -7%;
+								left: 20%;
+								background-color: #a5a5a5;
+								margin: 0 10px;
+								display: block;
+								padding: 10px;
+								border-radius: 6px;
+							}
+						}
 					}
 				}
 				&:hover {
 					border-radius: 5px;
 					box-shadow: 0px 0px 5px #00000030;
-					background-color: #c4c4c436;
+					background-color: #fafafa;
 					.info-produto a {
 						visibility: hidden;
 						@media (max-width: map.get(v.$max-width-media-queries, "mobile")) {
@@ -124,9 +129,9 @@ body {
 					}
 					.imagem-produto {
 						img {
-                            animation-name: product-hover;
-                            animation-fill-mode: forwards;
-                            animation-duration: .3s;
+							animation-name: product-hover;
+							animation-fill-mode: forwards;
+							animation-duration: 0.3s;
 						}
 					}
 				}
