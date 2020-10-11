@@ -184,7 +184,7 @@
 			&:nth-child(2n) {
 				display: flex;
 				justify-content: center;
-				@extend %icon-font;
+				@include m.default-revert();
 				@media (max-width: map.get(v.$max-width-media-queries, "mobile")) {
 					margin: 5px 0;
 				}
@@ -205,7 +205,7 @@
 					margin-left: auto;
 				}
 				strong {
-					@extend %main-font;
+					@include m.default-revert();
 					font-weight: bold;
 					// font-size: inherit;
 				}
@@ -225,7 +225,7 @@
 			*,
 			*::before,
 			*::after {
-				@extend %default-revert;
+				@include m.default-revert();
 				text-decoration: none;
 				list-style: none;
 				color: inherit;
@@ -263,7 +263,7 @@
 				}
 			}
 			a {
-				@extend %main-font;
+				@include m.default-revert();
 			}
 		}
 	}
@@ -279,7 +279,7 @@
 		*,
 		&::before,
 		&::after {
-			@extend %default-revert;
+			@include m.default-revert();
 			text-decoration: none;
 			color: inherit;
 			list-style: none;
@@ -294,6 +294,8 @@
 #cabecalho {
 	.conteiner {
 		display: grid;
+		grid-template-rows: repeat(2, max-content);
+		grid-template-columns: 1fr;
 		.row-fluid {
 			display: grid;
 			grid-template-areas: "logo menus";
@@ -348,7 +350,9 @@
 				grid-template-areas: "logo";
 				grid-template-columns: none;
 			}
-		}
-		@include superior-menu();
+        }
+        @media (min-width: map.get(v.$max-width-media-queries, "mobile")) {
+            @include superior-menu();
+        }
 	}
 }

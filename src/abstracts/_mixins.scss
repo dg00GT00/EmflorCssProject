@@ -1,4 +1,5 @@
 @use '../components/icon-set';
+@use '../base';
 
 @mixin icon-insertion($icon-name, $icon-size: 30px) {
 	@extend %#{$icon-name};
@@ -6,4 +7,11 @@
 	height: #{$icon-size};
     width: #{$icon-size};
     opacity: 0.9;
+}
+
+@mixin default-revert {
+    all: revert;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
