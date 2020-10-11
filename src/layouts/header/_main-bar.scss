@@ -84,10 +84,11 @@
 /* The absolute positioned initial bar */
 .barra-inicial {
 	line-height: normal;
-	height: 4px;
+	height: 6px;
 	margin: auto;
 	max-width: v.$small-theme-width;
-	position: relative;
+    position: relative;
+    background-color: v.$main-site-color;
 	.conteiner {
 		position: relative;
 		.row-fluid {

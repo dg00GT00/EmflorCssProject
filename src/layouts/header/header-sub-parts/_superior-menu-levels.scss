@@ -1,0 +1,124 @@
+@use 'sass:map';
+@use '../../../abstracts/variables' as v;
+@use '../../../abstracts/mixins' as m;
+@use '../../../base/typography' as t;
+
+/* This mixin represents the following group of elements
+*   - Categories menu level one
+*   - Categories menu level two
+    This mixin is a sub mixin of the 'superior-menu'
+ */
+ @mixin superior-menu-levels() {
+	.nivel-um {
+		display: flex;
+		align-items: center;
+		justify-content: space-evenly;
+		text-align: center;
+		padding: 15px 0;
+		border-top: v.$default-border-style;
+		li {
+			height: 50px;
+			flex: auto;
+			position: relative;
+			transition: all 0.2s;
+			background-color: v.$main-site-color;
+			@media (max-width: map.get(v.$max-width-media-queries, "mobile")) {
+				border: v.$default-border-style !important;
+				border-radius: 5px !important;
+				width: 100%;
+				height: 40px;
+			}
+			a {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				i {
+					display: none; // * reset
+				}
+			}
+			&:nth-child(2n) {
+				display: flex;
+				justify-content: center;
+				@media (max-width: map.get(v.$max-width-media-queries, "mobile")) {
+					margin: 5px 0;
+				}
+				&::before,
+				&::after {
+					@include m.icon-font();
+					content: "\f06c";
+					margin: auto 0;
+					opacity: 0.3;
+					font-size: 0.9rem;
+					@media (max-width: map.get(v.$max-width-media-queries, "mobile")) {
+						content: none;
+					}
+				}
+				&::before {
+					margin-right: auto;
+				}
+				&::after {
+					margin-left: auto;
+				}
+				strong {
+					font-weight: bold;
+				}
+			}
+			&:hover {
+                font-size: 1rem;
+                color: #7884C0;
+				a + ul.nivel-dois {
+                    display: block;
+					@media (max-width: map.get(v.$max-width-media-queries, "mobile")) {
+						display: none;
+					}
+				}
+			}
+		}
+		// * Dropdown menus
+		.nivel-dois.borda-alpha {
+			*,
+			*::before,
+			*::after {
+				@include m.default-revert();
+				text-decoration: none;
+				list-style: none;
+				color: inherit;
+            }
+            color: t.$main-font-color;
+			z-index: 10;
+			animation-name: slide-in;
+			animation-duration: 0.2s;
+			animation-fill-mode: forwards;
+			display: none;
+			position: absolute;
+			left: 50%;
+			width: 65%;
+			background-color: white; // ? Temporary setting
+			transform: translateX(-50%);
+			box-shadow: 1px 3px 2px 0px #00000052;
+			border-radius: 3px;
+			border-top: 2px solid #7884C0;
+			li {
+				height: 50px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				position: relative;
+				&:hover {
+					background-color: #00000008;
+				}
+			}
+			li:nth-child(2n) {
+				&::before {
+					content: "";
+					width: 80%;
+					height: 1px;
+					background-color: #b9b9b9;
+					position: absolute;
+					top: -1px;
+				}
+			}
+		}
+	}
+}

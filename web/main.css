@@ -183,10 +183,11 @@
 /* The absolute positioned initial bar */
 .barra-inicial {
   line-height: normal;
-  height: 4px;
+  height: 6px;
   margin: auto;
   max-width: 980px;
   position: relative;
+  background-color: #deb09e94;
 }
 .barra-inicial .conteiner {
   position: relative;
@@ -284,6 +285,14 @@
 }
 
 /* This mixin represents the following group of elements
+*   - Categories menu level one
+*   - Categories menu level two
+    This mixin is a sub mixin of the 'superior-menu'
+ */
+/* This mixin represents the following group of elements
+*    - Categories menu group set
+ */
+/* This mixin represents the following group of elements
 *    - Login text
 *    - My account
 *    - My requests
@@ -293,14 +302,6 @@
 *    - Search bar
 *    - Phone and Whatsapp contacts
 *    - Shopping cart
- */
-/* This mixin represents the following group of elements
-*   - Categories menu level one
-*   - Categories menu level two
-    This mixin is a sub mixin of the 'superior-menu'
- */
-/* This mixin represents the following group of elements
-*    - Categories menu group set
  */
 /* 
 * Main Header Selectors
@@ -529,7 +530,7 @@
   content: "";
 }
 #cabecalho .conteiner .row-fluid .conteudo-topo .inferior .busca:focus-within {
-  border: 1.5px solid bisque;
+  border: 1.5px solid #379D7D;
 }
 @media (max-width: 968px) {
   #cabecalho .conteiner .row-fluid .conteudo-topo .inferior {
@@ -595,7 +596,8 @@
     height: 50px;
     flex: auto;
     position: relative;
-    transition: font-size 0.2s;
+    transition: all 0.2s;
+    background-color: #deb09e94;
   }
 }
 @media (min-width: 767px) and (max-width: 767px) {
@@ -663,6 +665,7 @@
 @media (min-width: 767px) {
   #cabecalho .conteiner .menu.superior .nivel-um li:hover {
     font-size: 1rem;
+    color: #7884C0;
   }
   #cabecalho .conteiner .menu.superior .nivel-um li:hover a + ul.nivel-dois {
     display: block;
@@ -675,6 +678,7 @@
 }
 @media (min-width: 767px) {
   #cabecalho .conteiner .menu.superior .nivel-um .nivel-dois.borda-alpha {
+    color: #666666;
     z-index: 10;
     animation-name: slide-in;
     animation-duration: 0.2s;
@@ -687,7 +691,7 @@
     transform: translateX(-50%);
     box-shadow: 1px 3px 2px 0px #00000052;
     border-radius: 3px;
-    border-top: 2px solid;
+    border-top: 2px solid #7884C0;
   }
   #cabecalho .conteiner .menu.superior .nivel-um .nivel-dois.borda-alpha *,
 #cabecalho .conteiner .menu.superior .nivel-um .nivel-dois.borda-alpha *::before,
@@ -724,12 +728,12 @@
   border-radius: 8px;
 }
 
+/* The indeed list of products */
+/* The release section title */
 body {
   background-color: initial;
 }
 
-/* The release section title */
-/* The indeed list of products */
 /* List of products section */
 #corpo .conteiner .row-fluid {
   margin: 0;

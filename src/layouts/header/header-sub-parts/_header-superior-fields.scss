@@ -1,0 +1,60 @@
+@use 'sass:map';
+@use '../../../abstracts/variables' as v;
+@use '../../../abstracts/mixins' as m;
+
+/* This mixin represents the following group of elements
+*    - Login text
+*    - My account
+*    - My requests
+*    - Talk with us
+ */
+ @mixin header-superior-fields() {
+	.superior {
+		display: grid;
+		grid-template-columns: max-content 1fr;
+		align-items: center;
+		width: 100%;
+		padding-top: 1.3rem;
+		.span8 {
+			margin: 5px 14px 5px 0;
+			width: max-content;
+			@media (max-width: map.get(v.$max-width-media-queries, "968")) {
+				margin: 5px 0 5px 0;
+			}
+		}
+		.acoes-conta {
+			display: flex;
+			width: max-content;
+			li {
+				display: flex;
+				align-items: center;
+				flex: auto;
+				&:first-child {
+					margin-right: 0.7em;
+					i {
+						@include m.icon-insertion("my-requests-icon", 35px);
+						&::before {
+							content: "";
+						}
+					}
+				}
+				&:nth-child(2) {
+					i {
+						@include m.icon-insertion("my-account-icon", 35px);
+						&::before {
+							content: "";
+						}
+					}
+				}
+			}
+		}
+		@media (max-width: map.get(v.$max-width-media-queries, "968")) {
+			grid-template-rows: repeat(2, 1fr);
+			grid-template-columns: none;
+			justify-items: end;
+			padding-top: 0.7rem;
+			align-self: start;
+			row-gap: 10px;
+		}
+	}
+}

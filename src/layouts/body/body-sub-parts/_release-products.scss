@@ -1,0 +1,25 @@
+@use '../../../abstracts/variables' as v;
+
+/* The release section title */
+@mixin releases-products() {
+	.titulo-categoria {
+		all: revert;
+		text-align: center;
+		padding: 10px 0;
+		border-bottom: v.$default-border-style;
+		strong {
+			&::before {
+				@extend %icon-font;
+				content: "\f1bb";
+				opacity: 0.3;
+				margin-right: 5%;
+			}
+			&::after {
+				@extend %icon-font;
+				content: "\f1bb";
+				opacity: 0.3;
+				margin-left: 5%;
+			}
+		}
+	}
+}

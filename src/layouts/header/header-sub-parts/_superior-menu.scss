@@ -1,0 +1,21 @@
+@use '../../../abstracts/mixins' as m;
+@use 'superior-menu-levels' as *;
+
+/* This mixin represents the following group of elements
+*    - Categories menu group set
+ */
+ @mixin superior-menu() {
+	.menu.superior {
+		z-index: 10;
+		&,
+		*,
+		&::before,
+		&::after {
+			@include m.default-revert();
+			text-decoration: none;
+			color: inherit;
+			list-style: none;
+		}
+		@include superior-menu-levels();
+	}
+}
