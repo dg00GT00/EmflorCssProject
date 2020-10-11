@@ -214,12 +214,12 @@
 			&:nth-child(2n) {
 				display: flex;
 				justify-content: center;
-				@include m.default-revert();
 				@media (max-width: map.get(v.$max-width-media-queries, "mobile")) {
 					margin: 5px 0;
 				}
 				&::before,
 				&::after {
+                    @include m.icon-font();
 					content: "\f06c";
 					margin: auto 0;
 					opacity: 0.3;
@@ -235,7 +235,6 @@
 					margin-left: auto;
 				}
 				strong {
-					@include m.default-revert();
 					font-weight: bold;
 				}
 			}
@@ -258,7 +257,8 @@
 				text-decoration: none;
 				list-style: none;
 				color: inherit;
-			}
+            }
+            z-index: 10;
 			animation-name: slide-in;
 			animation-duration: 0.2s;
 			animation-fill-mode: forwards;
@@ -290,9 +290,6 @@
 					position: absolute;
 					top: -1px;
 				}
-			}
-			a {
-				@include m.default-revert();
 			}
 		}
 	}

@@ -593,10 +593,6 @@
   #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n) {
     display: flex;
     justify-content: center;
-    all: revert;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
   }
 }
 @media (min-width: 767px) and (max-width: 767px) {
@@ -606,6 +602,10 @@
 }
 @media (min-width: 767px) {
   #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n)::before, #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n)::after {
+    font-family: "FontAwesome-v4";
+    font-weight: initial;
+    font-style: initial;
+    font-size: 1.2rem;
     content: "";
     margin: auto 0;
     opacity: 0.3;
@@ -629,10 +629,6 @@
 }
 @media (min-width: 767px) {
   #cabecalho .conteiner .menu.superior .nivel-um li:nth-child(2n) strong {
-    all: revert;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
     font-weight: bold;
   }
 }
@@ -651,6 +647,7 @@
 }
 @media (min-width: 767px) {
   #cabecalho .conteiner .menu.superior .nivel-um .nivel-dois.borda-alpha {
+    z-index: 10;
     animation-name: slide-in;
     animation-duration: 0.2s;
     animation-fill-mode: forwards;
@@ -692,12 +689,6 @@
     background-color: #b9b9b9;
     position: absolute;
     top: -1px;
-  }
-  #cabecalho .conteiner .menu.superior .nivel-um .nivel-dois.borda-alpha a {
-    all: revert;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
   }
 }
 
