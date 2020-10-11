@@ -488,6 +488,7 @@
 @media (max-width: 767px) {
   #cabecalho .conteiner .row-fluid .conteudo-topo {
     grid-row: none;
+    grid-template-rows: none;
   }
 }
 #cabecalho .conteiner .row-fluid a {
@@ -498,6 +499,7 @@
   #cabecalho .conteiner .row-fluid {
     grid-template-areas: "logo";
     grid-template-columns: none;
+    margin: 0;
   }
 }
 #cabecalho .conteiner .menu.superior {
@@ -521,6 +523,7 @@
   #cabecalho .conteiner .menu.superior .nivel-um {
     border: none;
     flex-direction: column;
+    padding: 0;
   }
 }
 #cabecalho .conteiner .menu.superior .nivel-um li {
