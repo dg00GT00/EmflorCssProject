@@ -1,4 +1,6 @@
+@use '../base/typography' as t;
 @use '../components/icon-set';
+@use '../base';
 
 @mixin icon-insertion($icon-name, $icon-size: 30px) {
 	@extend %#{$icon-name};
@@ -6,4 +8,18 @@
 	height: #{$icon-size};
     width: #{$icon-size};
     opacity: 0.9;
+}
+
+@mixin default-revert {
+    all: revert;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@mixin icon-font {
+    font-family: "FontAwesome-v4";
+    font-weight: initial;
+    font-style: initial;
+    font-size: t.$pseudo-icon-font-size;
 }
