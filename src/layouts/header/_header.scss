@@ -75,8 +75,10 @@
 		margin: 5px 0;
 		.span8 {
 			margin: 0 22px 0 0;
-			a {
-				margin-left: 15px;
+			.atalho-menu {
+                margin-left: 15px;
+                display: none;
+                @include m.icon-insertion("see-more-mobile-icon", 34px);
 			}
 			@media (max-width: map.get(v.$max-width-media-queries, "mobile")) {
 				display: grid;
@@ -87,21 +89,26 @@
 				.busca {
 					grid-row: search_bar;
 					grid-column: search_bar-start / drop-end;
-					margin-right: 30px;
+					margin-right: 42px;
 				}
 				a {
-					display: block !important; // * reset;
+					display: block !important; // * reset
 					grid-row: icon;
 					grid-column: icon;
 					align-self: center;
-					justify-self: end;
+                    justify-self: end;
+                    &::before {
+                        content: ""; // * reset
+                        display: none;
+                    }
 				}
 				.menu.superior {
 					grid-row: drop;
-					grid-column: drop;
+                    grid-column: drop;
 					display: block;
 					margin: auto;
-					width: max-content;
+                    width: 100%;
+                    text-align: center;
 					grid-template-rows: none; // * reset
 					grid-template-columns: none; // * reset
 					row-gap: 0; // * reset
@@ -111,7 +118,18 @@
                     }
 					.nivel-um.active {
 						display: flex;
-						flex-direction: column;
+                        flex-direction: column;
+                        li {
+                            height: 50px;
+                            display: flex;
+                            justify-content: center;
+                        }
+                        i {
+                            @include m.default-revert();
+                            &::before {
+                                content: "";
+                            }
+                        }
 						ul {
 							display: none;
 						}
@@ -380,7 +398,8 @@
 			}
 			@media (max-width: map.get(v.$max-width-media-queries, "mobile")) {
 				grid-template-rows: 0.2fr max-content;
-				grid-template-columns: 1fr;
+                grid-template-columns: 1fr;
+                margin: 0;
 			}
 		}
 		@media (min-width: map.get(v.$max-width-media-queries, "mobile")) {
