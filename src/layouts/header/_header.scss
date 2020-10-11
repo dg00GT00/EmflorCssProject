@@ -76,9 +76,9 @@
 		.span8 {
 			margin: 0 22px 0 0;
 			.atalho-menu {
-                margin-left: 15px;
-                display: none;
-                @include m.icon-insertion("see-more-mobile-icon", 34px);
+				margin-left: 15px;
+				display: none;
+				@include m.icon-insertion("see-more-mobile-icon", 34px);
 			}
 			@media (max-width: map.get(v.$max-width-media-queries, "mobile")) {
 				display: grid;
@@ -96,40 +96,40 @@
 					grid-row: icon;
 					grid-column: icon;
 					align-self: center;
-                    justify-self: end;
-                    &::before {
-                        content: ""; // * reset
-                        display: none;
-                    }
+					justify-self: end;
+					&::before {
+						content: ""; // * reset
+						display: none;
+					}
 				}
 				.menu.superior {
 					grid-row: drop;
-                    grid-column: drop;
+					grid-column: drop;
 					display: block;
 					margin: auto;
-                    width: 100%;
-                    text-align: center;
+					width: 100%;
+					text-align: center;
 					grid-template-rows: none; // * reset
 					grid-template-columns: none; // * reset
 					row-gap: 0; // * reset
-                    align-self: normal; // * reset
-                    .nivel-um {
-                        display: none;
-                    }
+					align-self: normal; // * reset
+					.nivel-um {
+						display: none;
+					}
 					.nivel-um.active {
 						display: flex;
-                        flex-direction: column;
-                        li {
-                            height: 50px;
-                            display: flex;
-                            justify-content: center;
-                        }
-                        i {
-                            @include m.default-revert();
-                            &::before {
-                                content: "";
-                            }
-                        }
+						flex-direction: column;
+						li {
+							height: 50px;
+							display: flex;
+							justify-content: center;
+						}
+						i {
+							@include m.default-revert();
+							&::before {
+								content: "";
+							}
+						}
 						ul {
 							display: none;
 						}
@@ -207,13 +207,14 @@
 		align-items: center;
 		justify-content: space-evenly;
 		text-align: center;
-		border-top: v.$default-border-style;
 		padding: 15px 0;
+		border-top: v.$default-border-style;
 		li {
 			height: 50px;
 			flex: auto;
 			position: relative;
 			transition: font-size 0.2s;
+			// background-color: #deb09e;
 			@media (max-width: map.get(v.$max-width-media-queries, "mobile")) {
 				border: v.$default-border-style !important;
 				border-radius: 5px !important;
@@ -237,7 +238,7 @@
 				}
 				&::before,
 				&::after {
-                    @include m.icon-font();
+					@include m.icon-font();
 					content: "\f06c";
 					margin: auto 0;
 					opacity: 0.3;
@@ -275,8 +276,8 @@
 				text-decoration: none;
 				list-style: none;
 				color: inherit;
-            }
-            z-index: 10;
+			}
+			z-index: 10;
 			animation-name: slide-in;
 			animation-duration: 0.2s;
 			animation-fill-mode: forwards;
@@ -398,8 +399,8 @@
 			}
 			@media (max-width: map.get(v.$max-width-media-queries, "mobile")) {
 				grid-template-rows: 0.2fr max-content;
-                grid-template-columns: 1fr;
-                margin: 0;
+				grid-template-columns: 1fr;
+				margin: 0;
 			}
 		}
 		@media (min-width: map.get(v.$max-width-media-queries, "mobile")) {

@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import url(http://fonts.googleapis.com/css2?family=Nunito:wght@400);
 @import url(https://fonts.googleapis.com/css2?family=Krub:wght@400;600&family=Maven+Pro:wght@400;600&family=Red+Hat+Text:ital,wght@0,400;1,500&family=Sen:wght@400;700&display=swap);
 /* Animation to dropdown menus */
 @keyframes slide-in {
@@ -589,8 +588,8 @@
     align-items: center;
     justify-content: space-evenly;
     text-align: center;
-    border-top: 1px solid #0000000f;
     padding: 15px 0;
+    border-top: 1px solid #0000000f;
   }
   #cabecalho .conteiner .menu.superior .nivel-um li {
     height: 50px;
