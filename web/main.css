@@ -578,7 +578,7 @@
   #cabecalho .conteiner .row-fluid .conteudo-topo .inferior .span8 .menu.superior .nivel-um.active li:nth-child(2n) {
     margin: 10px 0;
   }
-  #cabecalho .conteiner .row-fluid .conteudo-topo .inferior .span8 .menu.superior .nivel-um.active li a:visited {
+  #cabecalho .conteiner .row-fluid .conteudo-topo .inferior .span8 .menu.superior .nivel-um.active li a:link, #cabecalho .conteiner .row-fluid .conteudo-topo .inferior .span8 .menu.superior .nivel-um.active li a:visited {
     background-color: #deb09e94;
     border-radius: 4px;
     height: 100%;
@@ -923,6 +923,14 @@ body {
     flex-direction: row;
   }
 }
+@media (max-width: 480px) {
+  #corpo .conteiner .row-fluid #listagemProdutos ul .listagem-linha .span3 .listagem-item {
+    flex-direction: column;
+  }
+  #corpo .conteiner .row-fluid #listagemProdutos ul .listagem-linha .span3 .listagem-item .imagem-produto {
+    border: none;
+  }
+}
 #corpo .conteiner .row-fluid #listagemProdutos ul .listagem-linha .span3 .listagem-item .info-produto {
   all: revert;
   text-align: center;
@@ -940,6 +948,7 @@ body {
   #corpo .conteiner .row-fluid #listagemProdutos ul .listagem-linha .span3 .listagem-item .info-produto div:last-child {
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
   }
 }
 #corpo .conteiner .row-fluid #listagemProdutos ul .listagem-linha .span3 .listagem-item .info-produto > div {
@@ -955,9 +964,10 @@ body {
   color: #799273;
 }
 @media (max-width: 767px) {
-  #corpo .conteiner .row-fluid #listagemProdutos ul .listagem-linha .span3 .listagem-item .info-produto > div .preco-produto strong::after {
+  #corpo .conteiner .row-fluid #listagemProdutos ul .listagem-linha .span3 .listagem-item .info-produto > div::after {
     content: "Comprar";
     padding: 10px;
+    color: white;
     background-color: #525A72;
     border-radius: 7px;
     margin-left: 2rem;
@@ -1022,7 +1032,7 @@ body {
   width: initial;
   height: initial;
   background-repeat: no-repeat;
-  background-position: left 25vw center;
+  background-position: left 25vw bottom -36px;
   background-size: auto;
 }
 #rodape .links-rodape ul li {

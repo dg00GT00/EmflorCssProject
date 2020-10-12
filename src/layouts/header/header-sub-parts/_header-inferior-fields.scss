@@ -80,6 +80,7 @@
 								margin: 10px 0;
 							}
 							a {
+                                &:link,
 								&:visited {
 									background-color: v.$main-site-color;
 									border-radius: 4px;
