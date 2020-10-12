@@ -1,5 +1,6 @@
 @use '../../base';
 @use '../../abstracts/variables' as v;
+@use '../../abstracts/mixins' as m;
 
 #barraTopo {
 	&,
@@ -71,18 +72,18 @@
                     @extend %main-font;
 				}
 				.icon-search {
-					@extend %icon-font;
+					@include m.icon-insertion("search-icon");
 					border: none;
 					background-color: transparent;
 					margin-left: 0.6rem;
 					cursor: pointer;
 					&::before {
-						content: "\f002";
+						content: "";
 					}
 				}
 			}
 			&:focus-within {
-				border: 1.5px solid bisque; // ? Temporary value
+				border: 1.5px solid v.$secondary-site-color; // ? Temporary value
 			}
 		}
 		.span6 {
@@ -90,13 +91,22 @@
 				a {
 					display: flex;
 					justify-content: flex-end;
-					text-decoration: none;
+                    text-decoration: none;
+                    align-items: center;
 					color: inherit; // ? Temporary value
 					i {
-						@extend %icon-font;
-						width: auto;
-						height: auto;
-					}
+                        margin-right: .5rem;
+                        @include m.icon-insertion("shopping-cart-icon");
+                        &::before {
+                            content: "";
+                            width: auto;
+                            height: auto;
+                        }
+                    }
+                    span {
+                        margin: 0; // * reset
+                        line-height: normal; // * reset
+                    }
 				}
 			}
 		}

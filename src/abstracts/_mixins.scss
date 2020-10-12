@@ -10,6 +10,7 @@
     opacity: 0.9;
 }
 
+/* Mixin representation of the default-revert placeholder */
 @mixin default-revert {
     all: revert;
     box-sizing: border-box;
@@ -17,6 +18,7 @@
     padding: 0;
 }
 
+/* Mixin representation of the icon-font placeholder */
 @mixin icon-font {
     font-family: "FontAwesome-v4";
     font-weight: initial;
