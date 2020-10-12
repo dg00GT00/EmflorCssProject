@@ -26,17 +26,20 @@
 			*,
 			&::after,
 			&::before {
-                @extend %default-revert;
-            }
-            li:first-child {
-                i {
-                    @include m.icon-insertion("talk-with-us-icon");
-                    margin-right: .5rem;
-                    &::before {
-                        content: "";
-                    }
-                }
-            }
+				@extend %default-revert;
+			}
+			li:first-child {
+				a:link:hover {
+					color: v.$tertiary-site-color;
+				}
+				i {
+					@include m.icon-insertion("talk-with-us-icon");
+					margin-right: 0.5rem;
+					&::before {
+						content: "";
+					}
+				}
+			}
 			li {
 				margin: 0;
 				padding: 0;
@@ -51,11 +54,11 @@
 					right: 120%;
 					width: max-content;
 					i {
-                        @include m.icon-insertion("whatsapp-icon", 25px);
-                        margin-right: .5rem;
-                        &::before {
-                            content: "";
-                        }
+						@include m.icon-insertion("whatsapp-icon", 25px);
+						margin-right: 0.5rem;
+						&::before {
+							content: "";
+						}
 					}
 					@media (max-width: map.get(v.$max-width-media-queries, "968")) {
 						top: 0;
@@ -87,8 +90,8 @@
 	height: 6px;
 	margin: auto;
 	max-width: v.$small-theme-width;
-    position: relative;
-    background-color: v.$main-site-color;
+	position: relative;
+	background-color: v.$main-site-color;
 	.conteiner {
 		position: relative;
 		.row-fluid {

@@ -116,7 +116,7 @@
 		}
 		.span4 {
 			justify-self: end;
-			a {
+			a:link {
 				display: flex;
 				align-items: center;
 				i {
@@ -124,7 +124,10 @@
 					&::before {
 						content: "";
 					}
-				}
+                }
+                &:hover {
+                    color: v.$tertiary-site-color;
+                }
 			}
 		}
 		.busca {

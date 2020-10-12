@@ -106,6 +106,9 @@
                     span {
                         margin: 0; // * reset
                         line-height: normal; // * reset
+                        &:hover {
+                            color: v.$tertiary-site-color;
+                        }
                     }
 				}
 			}

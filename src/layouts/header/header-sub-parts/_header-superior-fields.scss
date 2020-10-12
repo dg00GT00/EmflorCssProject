@@ -20,7 +20,13 @@
 			width: max-content;
 			@media (max-width: map.get(v.$max-width-media-queries, "968")) {
 				margin: 5px 0 5px 0;
-			}
+            }
+            a {
+                span {
+                    color: v.$tertiary-site-color;
+                    font-weight: bold;
+                }
+            }
 		}
 		.acoes-conta {
 			display: flex;
@@ -45,7 +51,10 @@
 							content: "";
 						}
 					}
-				}
+                }
+                a:link:hover {
+                    color: v.$tertiary-site-color;
+                }
 			}
 		}
 		@media (max-width: map.get(v.$max-width-media-queries, "968")) {
