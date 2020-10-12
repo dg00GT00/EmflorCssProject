@@ -18,16 +18,18 @@
 		margin: 5px 0;
 		.span8 {
 			margin: 0 22px 0 0;
-			a:link,
-			a:visited {
-				&.atalho-menu {
-					margin-left: 15px;
-					display: none;
-					@include m.icon-insertion("see-more-mobile-icon", 34px);
+			a {
+				&:link,
+				&:visited {
+					&.atalho-menu {
+						margin-left: 15px;
+						display: none;
+						@include m.icon-insertion("see-more-mobile-icon", 34px);
+					}
 				}
-			}
-			a:active.atalho-menu {
-				background-color: #0000000a;
+				&:active.atalho-menu {
+					background-color: v.$pressed-link-effect-color;
+				}
 			}
 			@media (max-width: map.get(v.$max-width-media-queries, "mobile")) {
 				display: grid;
@@ -77,22 +79,24 @@
 							&:nth-child(2n) {
 								margin: 10px 0;
 							}
-							a:link,
-							a:visited {
-								background-color: v.$main-site-color;
-								border-radius: 4px;
-								height: 100%;
-								width: 100%;
-								display: flex;
-								justify-content: center;
-								align-items: center;
-								transition: all 0.3s;
-							}
-							a:active {
-								background-color: color.scale(
-									v.$main-site-color,
-									$lightness: -30%
-								);
+							a {
+								&:link,
+								&:visited {
+									background-color: v.$main-site-color;
+									border-radius: 4px;
+									height: 100%;
+									width: 100%;
+									display: flex;
+									justify-content: center;
+									align-items: center;
+									transition: all 0.3s;
+								}
+								&:active {
+									background-color: color.scale(
+										v.$main-site-color,
+										$lightness: -30%
+									);
+								}
 							}
 						}
 						i {
@@ -124,16 +128,16 @@
 					&::before {
 						content: "";
 					}
-                }
-                &:hover {
-                    color: v.$tertiary-site-color;
-                }
+				}
+				&:hover {
+					color: v.$tertiary-site-color;
+				}
 			}
 		}
 		.busca {
 			// * Search bar
 			border: v.$default-border-style;
-			padding: 0.6rem;
+			padding: 0.4rem;
 			padding-right: 0.8rem;
 			padding-left: 0.8rem;
 			border-radius: 5px;

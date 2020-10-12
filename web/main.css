@@ -74,8 +74,7 @@
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' aria-labelledby='title' aria-describedby='desc' role='img' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Ctitle%3ESearch Find%3C/title%3E%3Cdesc%3EA flat styled icon from Orion Icon Library.%3C/desc%3E%3Cpath data-name='layer3' d='M41.732 36.489L57.34 52.1a3 3 0 0 1-4.24 4.24L37.641 40.883' fill='%23a7867a'%3E%3C/path%3E%3Ccircle data-name='layer2' cx='25.816' cy='25.816' r='19.816' fill='%23deb09e'%3E%3C/circle%3E%3Ccircle data-name='layer1' cx='25.815' cy='25.816' r='16.213' fill='%23a5e4f4'%3E%3C/circle%3E%3Cpath data-name='opacity' d='M42.028 25.816A16.16 16.16 0 0 0 37.2 14.283L14.283 37.2a16.154 16.154 0 0 0 11.532 4.825c.109 0 .214-.014.322-.017l15.875-15.87c.002-.108.016-.214.016-.322z' fill='%23fff' opacity='.5'%3E%3C/path%3E%3C/svg%3E");
 }
 
-#cabecalho .conteiner .row-fluid .conteudo-topo .inferior .span8 a:link.atalho-menu,
-#cabecalho .conteiner .row-fluid .conteudo-topo .inferior .span8 a:visited.atalho-menu {
+#cabecalho .conteiner .row-fluid .conteudo-topo .inferior .span8 a:link.atalho-menu, #cabecalho .conteiner .row-fluid .conteudo-topo .inferior .span8 a:visited.atalho-menu {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' aria-labelledby='title' aria-describedby='desc' role='img' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Ctitle%3EPortfolio Grid%3C/title%3E%3Cdesc%3EA flat styled icon from Orion Icon Library.%3C/desc%3E%3Cpath data-name='layer2' fill='%23deb09e' d='M2 2h12v12H2zm24 0h12v12H26zm24 0h12v12H50zM2 50h12v12H2z'%3E%3C/path%3E%3Cpath data-name='layer1' fill='%23379d7d' d='M26 50h12v12H26z'%3E%3C/path%3E%3Cpath data-name='layer3' fill='%237884c0' d='M50 50h12v12H50z'%3E%3C/path%3E%3Cpath data-name='layer2' fill='%23deb09e' d='M2 25.988h12v12H2z'%3E%3C/path%3E%3Cpath data-name='layer1' fill='%23379d7d' d='M26 25.988h12v12H26zm24 0h12v12H50z'%3E%3C/path%3E%3C/svg%3E");
 }
 
@@ -148,7 +147,7 @@
 }
 #barraTopo .conteiner .busca {
   border: 1px solid #0000002a;
-  padding: 0.6rem;
+  padding: 0.3rem;
   padding-right: 0.8rem;
   padding-left: 0.8rem;
   border-radius: 5px;
@@ -176,7 +175,7 @@
   content: "";
 }
 #barraTopo .conteiner .busca:focus-within {
-  border: 1.5px solid #439378;
+  border: 1.5px solid #5db497;
 }
 #barraTopo .conteiner .span6 > div a {
   display: flex;
@@ -504,8 +503,7 @@
 #cabecalho .conteiner .row-fluid .conteudo-topo .inferior .span8 {
   margin: 0 22px 0 0;
 }
-#cabecalho .conteiner .row-fluid .conteudo-topo .inferior .span8 a:link.atalho-menu,
-#cabecalho .conteiner .row-fluid .conteudo-topo .inferior .span8 a:visited.atalho-menu {
+#cabecalho .conteiner .row-fluid .conteudo-topo .inferior .span8 a:link.atalho-menu, #cabecalho .conteiner .row-fluid .conteudo-topo .inferior .span8 a:visited.atalho-menu {
   margin-left: 15px;
   display: none;
   background-size: cover;
@@ -567,8 +565,7 @@
   #cabecalho .conteiner .row-fluid .conteudo-topo .inferior .span8 .menu.superior .nivel-um.active li:nth-child(2n) {
     margin: 10px 0;
   }
-  #cabecalho .conteiner .row-fluid .conteudo-topo .inferior .span8 .menu.superior .nivel-um.active li a:link,
-#cabecalho .conteiner .row-fluid .conteudo-topo .inferior .span8 .menu.superior .nivel-um.active li a:visited {
+  #cabecalho .conteiner .row-fluid .conteudo-topo .inferior .span8 .menu.superior .nivel-um.active li a:link, #cabecalho .conteiner .row-fluid .conteudo-topo .inferior .span8 .menu.superior .nivel-um.active li a:visited {
     background-color: #deb09e94;
     border-radius: 4px;
     height: 100%;
@@ -624,7 +621,7 @@
 }
 #cabecalho .conteiner .row-fluid .conteudo-topo .inferior .busca {
   border: 1px solid #0000002a;
-  padding: 0.6rem;
+  padding: 0.4rem;
   padding-right: 0.8rem;
   padding-left: 0.8rem;
   border-radius: 5px;
@@ -647,7 +644,7 @@
   content: "";
 }
 #cabecalho .conteiner .row-fluid .conteudo-topo .inferior .busca:focus-within {
-  border: 1.5px solid #439378;
+  border: 1.5px solid #5db497;
 }
 @media (max-width: 968px) {
   #cabecalho .conteiner .row-fluid .conteudo-topo .inferior {
@@ -867,8 +864,19 @@ body {
 #corpo .conteiner .row-fluid #listagemProdutos.borda-alpha .titulo-categoria {
   all: revert;
   text-align: center;
-  padding: 10px 0;
+  padding: 18px 0;
   border-bottom: 1px solid #0000002a;
+}
+#corpo .conteiner .row-fluid #listagemProdutos.borda-alpha .titulo-categoria strong {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  background-color: #5db497;
+  font-weight: bold;
+  border-radius: 4px;
+  color: black;
 }
 #corpo .conteiner .row-fluid #listagemProdutos.borda-alpha .titulo-categoria strong::before {
   content: "";
