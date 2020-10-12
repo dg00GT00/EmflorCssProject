@@ -1,6 +1,16 @@
 @use '../../base';
+@use '../../abstracts/mixins' as m;
 
 #rodape {
+	.institucional {
+		background-color: #799273;
+		@include m.icon-insertion("bottom-leaf-icon");
+		width: initial;
+		height: initial;
+		background-repeat: no-repeat;
+        background-position: left 25vw center;
+        background-size: auto;
+	}
 	.links-rodape {
 		ul {
 			li {
@@ -12,27 +22,34 @@
 		}
 	}
 	.pagamento-selos {
+        background-color: #51616c;
+        background-image: none;
 		.row-fluid {
-			display: flex;
-			flex-direction: column;
+            display: flex;
+            flex-direction: column;
+            .pagamento {
+                span {
+                    color: white;
+                }
+            }
 			.span4.selos {
                 all: revert;
 				& * {
-					@extend %default-revert
+					@extend %default-revert;
 				}
-                ul {
-                    list-style: none;
-                }
-                span.titulo {
-                    display: none;
-                }
+				ul {
+					list-style: none;
+				}
+				span.titulo {
+					display: none;
+				}
 			}
-        }
-        .pagamento {
-            width: auto;
-            .gateways-rodape {
-                border: none;
-            }
-        }
+		}
+		.pagamento {
+			width: auto;
+			.gateways-rodape {
+				border: none;
+			}
+		}
 	}
 }
