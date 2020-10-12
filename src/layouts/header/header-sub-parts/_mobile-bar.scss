@@ -1,0 +1,33 @@
+@use '../../../abstracts/variables' as v;
+@use '../../../abstracts/mixins' as m;
+
+@mixin mobile-bar {
+	.atalhos-mobile {
+		border-color: #7bdcbc;
+	}
+	.fundo-secundario,
+	.fundo-principal {
+		background-color: #5db497;
+		.icon-home {
+			@include m.icon-insertion("home-icon");
+			margin-left: 15px;
+			&::before {
+				content: "";
+			}
+		}
+		.icon-shopping-cart {
+			@include m.icon-insertion("shopping-cart-outline-icon");
+			margin: 0 15px;
+			&::before {
+				content: "";
+			}
+		}
+		.icon-user {
+			@include m.icon-insertion("my-account-outline-icon");
+			margin: 0 15px;
+			&::before {
+				content: "";
+			}
+		}
+	}
+}
