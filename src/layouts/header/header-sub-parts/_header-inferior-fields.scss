@@ -1,4 +1,5 @@
 @use 'sass:map';
+@use '../../../base';
 @use '../../../abstracts/variables' as v;
 @use '../../../abstracts/mixins' as m;
 
@@ -33,7 +34,6 @@
 					margin-right: 42px;
 				}
 				a {
-					display: block !important; // * reset
 					grid-row: icon;
 					grid-column: icon;
 					align-self: center;
@@ -42,7 +42,10 @@
 						content: ""; // * reset
 						display: none;
 					}
-				}
+                }
+                /* 
+                * The superior menus is relocated under inferior menu when on mobile size screen
+                */
 				.menu.superior {
 					grid-row: drop;
 					grid-column: drop;
@@ -55,7 +58,7 @@
 					row-gap: 0; // * reset
 					align-self: normal; // * reset
 					.nivel-um {
-						display: none;
+                        display: none;
 					}
 					.nivel-um.active {
 						display: flex;
@@ -68,7 +71,14 @@
                             border-radius: 4px;
 							&:nth-child(2n) {
 								margin: 10px 0;
-							}
+                            }
+                            a {
+                                height: 100%;
+                                width: 100%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                            }
 						}
 						i {
 							@include m.default-revert();

@@ -146,7 +146,7 @@
   flex: none;
 }
 #barraTopo .conteiner .busca {
-  border: 1px solid #0000000f;
+  border: 1px solid #0000002a;
   padding: 0.6rem;
   padding-right: 0.8rem;
   padding-left: 0.8rem;
@@ -503,6 +503,9 @@
     display: grid;
     margin: 0;
     grid-template-areas: "search_bar icon" "drop drop";
+    /* 
+    * The superior menus is relocated under inferior menu when on mobile size screen
+    */
   }
   #cabecalho .conteiner .row-fluid .conteudo-topo .inferior .span8 .busca {
     grid-row: search_bar;
@@ -510,7 +513,6 @@
     margin-right: 42px;
   }
   #cabecalho .conteiner .row-fluid .conteudo-topo .inferior .span8 a {
-    display: block !important;
     grid-row: icon;
     grid-column: icon;
     align-self: center;
@@ -548,6 +550,13 @@
   }
   #cabecalho .conteiner .row-fluid .conteudo-topo .inferior .span8 .menu.superior .nivel-um.active li:nth-child(2n) {
     margin: 10px 0;
+  }
+  #cabecalho .conteiner .row-fluid .conteudo-topo .inferior .span8 .menu.superior .nivel-um.active li a {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   #cabecalho .conteiner .row-fluid .conteudo-topo .inferior .span8 .menu.superior .nivel-um.active i {
     all: revert;
@@ -588,7 +597,7 @@
   content: "";
 }
 #cabecalho .conteiner .row-fluid .conteudo-topo .inferior .busca {
-  border: 1px solid #0000000f;
+  border: 1px solid #0000002a;
   padding: 0.6rem;
   padding-right: 0.8rem;
   padding-left: 0.8rem;
@@ -672,7 +681,7 @@
     justify-content: space-evenly;
     text-align: center;
     padding: 15px 0;
-    border-top: 1px solid #0000000f;
+    border-top: 1px solid #0000002a;
   }
   #cabecalho .conteiner .menu.superior .nivel-um li {
     height: 50px;
@@ -690,7 +699,7 @@
 }
 @media (min-width: 767px) and (max-width: 767px) {
   #cabecalho .conteiner .menu.superior .nivel-um li {
-    border: 1px solid #0000000f !important;
+    border: 1px solid #0000002a !important;
     border-radius: 5px !important;
     width: 100%;
     height: 40px;
@@ -833,7 +842,7 @@ body {
   all: revert;
   text-align: center;
   padding: 10px 0;
-  border-bottom: 1px solid #0000000f;
+  border-bottom: 1px solid #0000002a;
 }
 #corpo .conteiner .row-fluid #listagemProdutos.borda-alpha .titulo-categoria strong::before {
   content: "";
@@ -881,7 +890,7 @@ body {
   }
 }
 #corpo .conteiner .row-fluid #listagemProdutos ul .listagem-linha .span3 .listagem-item .info-produto > div {
-  border-top: 1px solid #0000000f;
+  border-top: 1px solid #0000002a;
   padding: 20px 0;
   margin: 10px 0;
 }
