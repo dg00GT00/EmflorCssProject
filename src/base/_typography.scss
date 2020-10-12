@@ -1,4 +1,7 @@
-@import url(https://fonts.googleapis.com/css2?family=Krub:wght@400;600&family=Maven+Pro:wght@400;600&family=Red+Hat+Text:ital,wght@0,400;1,500&family=Sen:wght@400;700&display=swap);
+@use '../abstracts/variables' as v;
+@import url(
+    https://fonts.googleapis.com/css2?family=Krub:wght@400;600&family=Maven+Pro:wght@400;600&family=Red+Hat+Text:ital,wght@0,400;1,500&family=Sen:wght@400;700&family=Nova+Flat&display=swap
+    );
 
 $main-font: 'Sen', sans-serif;
 $main-font-size: .92rem;
@@ -14,6 +17,13 @@ $pseudo-icon-font-size: 1.2rem;
 
 %main-font {
     font-family: $main-font;
+    font-size: $main-font-size;
+    font-weight: 400;
+    color: $main-font-color;
+}
+
+%price-font {
+    font-family: "Nova Flat", cursive;
     font-size: $main-font-size;
     font-weight: 400;
     color: $main-font-color;

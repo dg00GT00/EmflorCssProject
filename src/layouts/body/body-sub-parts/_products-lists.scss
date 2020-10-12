@@ -1,4 +1,5 @@
 @use 'sass:map';
+@use '../../../base';
 @use '../../../abstracts/variables' as v;
 
 /* The indeed list of products */
@@ -26,6 +27,8 @@
 						all: revert;
 						text-align: center;
 						padding: 0 10px;
+						display: flex;
+						flex-direction: column;
 						a {
 							// * The max-height and min-height should be equal to constraint the amount of text written in 'info-product' box
 							max-height: 55px;
@@ -41,17 +44,22 @@
 						}
 						> div {
 							border-top: v.$default-border-style;
-							padding: 20px 0;
-							margin: 10px 0;
-							strong {
-								font-size: 1.3rem;
-								@media (max-width: map.get(v.$max-width-media-queries, "mobile")) {
-									&::after {
-										content: "Comprar";
-										padding: 10px;
-										background-color: rgba(117, 117, 117, 0.65);
-										border-radius: 7px;
-										margin-left: 2rem;
+							padding: 15px 0;
+							margin-top: 10px;
+							.preco-produto {
+								padding: 8px 0;
+								strong {
+                                    font-size: 1.5rem;
+                                    color: #799273;
+									@extend %price-font;
+									@media (max-width: map.get(v.$max-width-media-queries, "mobile")) {
+										&::after {
+											content: "Comprar";
+											padding: 10px;
+											background-color: #525A72;
+											border-radius: 7px;
+                                            margin-left: 2rem;
+										}
 									}
 								}
 							}
@@ -63,23 +71,24 @@
 					&:hover {
 						outline: none;
 						.acoes-produto {
-							bottom: 37.6%;
+							bottom: 32.6%;
 						}
 					}
 					.acoes-produto {
 						border: none;
 						padding: 0;
 						background-color: transparent;
-						position: relative;
+						position: absolute;
 						a {
-                            padding: 6px 0;
+							padding: 6px 0;
 							&::before {
 								content: "Comprar";
 								position: absolute;
 								width: 50%;
 								top: -7%;
 								left: 20%;
-								background-color: #a5a5a5;
+                                background-color: #525A72;
+                                color: white;
 								margin: 0 10px;
 								display: block;
 								padding: 10px;

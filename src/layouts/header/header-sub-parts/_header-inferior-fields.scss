@@ -19,7 +19,7 @@
 		.span8 {
 			margin: 0 22px 0 0;
 			a {
-				&:link,
+                &:link,
 				&:visited {
 					&.atalho-menu {
 						margin-left: 15px;
@@ -80,7 +80,6 @@
 								margin: 10px 0;
 							}
 							a {
-								&:link,
 								&:visited {
 									background-color: v.$main-site-color;
 									border-radius: 4px;
@@ -120,7 +119,7 @@
 		}
 		.span4 {
 			justify-self: end;
-			a:link {
+			a {
 				display: flex;
 				align-items: center;
 				i {

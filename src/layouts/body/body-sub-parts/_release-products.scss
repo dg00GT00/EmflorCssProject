@@ -16,7 +16,7 @@
 			background-color: v.$secondary-site-color;
 			font-weight: bold;
 			border-radius: 4px;
-			color: black;
+			color: rgb(53, 53, 53);
 			&::before {
 				@extend %icon-font;
 				content: "\f1bb";
